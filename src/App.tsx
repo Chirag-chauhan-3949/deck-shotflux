@@ -1,4 +1,4 @@
-// Update one 
+// Update one Second time
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Users, Target, Cpu, TrendingUp, DollarSign, Film, Zap, Award } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
@@ -8,10 +8,13 @@ const PitchDeck = () => {
 
   // Add custom scrollbar styles
   useEffect(() => {
-    const style = document.createElement('style');
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
+  const style = document.createElement("style");
+  document.head.appendChild(style);
+
+  // cleanup returns void (no value)
+  return () => { style.remove(); };
+}, []);
+
 
   const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
   const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
