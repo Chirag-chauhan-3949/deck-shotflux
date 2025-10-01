@@ -21,16 +21,26 @@ const PitchDeck = () => {
     document.title = 'Shotflux Investor Pitch Deck';
     
     // Add or update meta tags
-    const setMetaTag = (name, content, isProperty = false) => {
-      const attribute = isProperty ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
+    const setMetaTag = (
+  name: string,
+  content: string,
+  isProperty: boolean = false
+): void => {
+  const attribute = isProperty ? "property" : "name";
+
+  // type the query result as HTMLMetaElement
+  let meta = document.querySelector<HTMLMetaElement>(
+    `meta[${attribute}="${name}"]`
+  );
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute(attribute, name);
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute("content", content);
+};
 
     // Standard meta tags
     setMetaTag('description', 'We are raising funds to get to 3000 monthly active paying users in 18 months.');
