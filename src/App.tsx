@@ -901,15 +901,15 @@ const setMetaTag = (
                 href="tel:+919867659005"
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
               >
-                📞 Call Now
+              Call Now
               </a>
               <a 
                 href="https://shotflux.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
               >
-                🚀 Try It Out
+              Try It Out
               </a>
             </div>
           </div>
