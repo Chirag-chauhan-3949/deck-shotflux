@@ -1,4 +1,3 @@
-// Update one Second time
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Users, Target, Cpu, TrendingUp, DollarSign, Film, Zap, Award } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
@@ -15,6 +14,37 @@ const PitchDeck = () => {
   return () => { style.remove(); };
 }, []);
 
+
+  // Add meta tags and title
+  useEffect(() => {
+    // Set document title
+    document.title = 'Shotflux Investor Pitch Deck';
+    
+    // Add or update meta tags
+    const setMetaTag = (name, content, isProperty = false) => {
+      const attribute = isProperty ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    // Standard meta tags
+    setMetaTag('description', 'We are raising funds to get to 3000 monthly active paying users in 18 months.');
+    
+    // Open Graph tags for social media
+    setMetaTag('og:title', 'Shotflux Investor Pitch Deck', true);
+    setMetaTag('og:description', 'We are raising funds to get to 3000 monthly active paying users in 18 months.', true);
+    setMetaTag('og:type', 'website', true);
+    
+    // Twitter Card tags
+    setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:title', 'Shotflux Investor Pitch Deck');
+    setMetaTag('twitter:description', 'We are raising funds to get to 3000 monthly active paying users in 18 months.');
+  }, []);
 
   const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
   const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
