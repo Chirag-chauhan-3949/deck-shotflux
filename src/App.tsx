@@ -1,9 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Users, Target, Cpu, TrendingUp, DollarSign, Film, Zap, Award } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 
 const PitchDeck = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Add custom scrollbar styles
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      /* Custom scrollbar for webkit browsers */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #1f2937;
+        border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #10b981;
+        border-radius: 10px;
+        border: 2px solid #1f2937;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #059669;
+      }
+      
+      /* Custom scrollbar for Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #10b981 #1f2937;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
   const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
   const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
@@ -12,14 +47,14 @@ const PitchDeck = () => {
     // Slide 1: Title
     {
       component: () => (
-        <div className="flex flex-col items-center justify-center text-center px-8">
-          <Film className="w-24 h-24 text-green-400 mb-6" />
-          <h1 className="text-6xl font-bold text-white mb-4">ShotFlux™</h1>
-          <p className="text-3xl text-gray-300 mb-3">From Story to Storyboard</p>
-          <p className="text-2xl text-green-400 mb-8 italic">In Minutes, Not Weeks</p>
-          <p className="text-lg text-gray-400 mb-2">From script to screen: faster, smarter, more creative</p>
-          <p className="text-sm text-gray-500 mt-6">September 29, 2025 • Mumbai, India</p>
-          <p className="text-sm text-gray-500">Shotflux.com (DATCRAZY LLP)</p>
+        <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8">
+          <Film className="w-16 h-16 sm:w-20 md:w-24 text-green-400 mb-4 sm:mb-6" />
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4">ShotFlux™</h1>
+          <p className="text-2xl sm:text-3xl text-gray-300 mb-2 sm:mb-3">From Story to Storyboard</p>
+          <p className="text-xl sm:text-2xl text-green-400 mb-6 sm:mb-8 italic">In Minutes, Not Weeks</p>
+          <p className="text-base sm:text-lg text-gray-400 mb-2">From script to screen: faster, smarter, more creative</p>
+          <p className="text-xs sm:text-sm text-gray-500 mt-4 sm:mt-6">September 29, 2025 • Mumbai, India</p>
+          <p className="text-xs sm:text-sm text-gray-500">Shotflux.com (DATCRAZY LLP)</p>
         </div>
       )
     },
@@ -27,28 +62,28 @@ const PitchDeck = () => {
     // Slide 2: Executive Summary
     {
       component: () => (
-        <div className="px-12 py-6">
-          <h2 className="text-4xl font-bold text-white mb-10">Executive Summary</h2>
-          <div className="grid grid-cols-2 gap-8">
-            <div className="bg-gray-800 p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
-              <Users className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Massive Addressable Market</h3>
-              <p className="text-gray-300 text-base">Video production is booming, projected to reach over $746B by 2030</p>
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-10">Executive Summary</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
+              <Users className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Massive Addressable Market</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Video production is booming, projected to reach over $746B by 2030</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
-              <Target className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Clear Pain & Need</h3>
-              <p className="text-gray-300 text-base">Pre-production remains manual and costly; AI saves time & money</p>
+            <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
+              <Target className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Clear Pain & Need</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Pre-production remains manual and costly; AI saves time & money</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
-              <Cpu className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Unique AI Platform</h3>
-              <p className="text-gray-300 text-base">ShotFlux™ automates breakdowns, shotlists & storyboards in minutes</p>
+            <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
+              <Cpu className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Unique AI Platform</h3>
+              <p className="text-gray-300 text-sm sm:text-base">ShotFlux™ automates breakdowns, shotlists & storyboards in minutes</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
-              <TrendingUp className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Compelling Growth Path</h3>
-              <p className="text-gray-300 text-base">Scalable SaaS with high margins, expanding beyond film schools</p>
+            <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/20 hover:border-green-500/50 transition-all">
+              <TrendingUp className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Compelling Growth Path</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Scalable SaaS with high margins, expanding beyond film schools</p>
             </div>
           </div>
         </div>
@@ -58,40 +93,40 @@ const PitchDeck = () => {
     // Slide 3: Problem
     {
       component: () => (
-        <div className="px-12 py-6">
-          <h2 className="text-4xl font-bold text-white mb-10">Problem & Opportunity</h2>
-          <div className="grid grid-cols-2 gap-12">
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-10">Problem & Opportunity</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-red-400 mb-6">The Problem</h3>
-              <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-400 mb-4 sm:mb-6">The Problem</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base">Script breakdown, shot lists & scheduling are manual and tedious</p>
+                  <p className="text-gray-300 text-sm sm:text-base">Script breakdown, shot lists & scheduling are manual and tedious</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base">Costs & errors increase with complexity of shoots</p>
+                  <p className="text-gray-300 text-sm sm:text-base">Costs & errors increase with complexity of shoots</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base"><span className="text-red-400 font-bold">60%</span> of time spent on admin, not storytelling</p>
+                  <p className="text-gray-300 text-sm sm:text-base"><span className="text-red-400 font-bold">60%</span> of time spent on admin, not storytelling</p>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-green-400 mb-6">The Opportunity</h3>
-              <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-green-400 mb-4 sm:mb-6">The Opportunity</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base">AI automates breakdowns & shotlists in minutes</p>
+                  <p className="text-gray-300 text-sm sm:text-base">AI automates breakdowns & shotlists in minutes</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base">Real-time collaboration eliminates miscommunication</p>
+                  <p className="text-gray-300 text-sm sm:text-base">Real-time collaboration eliminates miscommunication</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-gray-300 text-base">SaaS models scale across schools, studios & indie creators</p>
+                  <p className="text-gray-300 text-sm sm:text-base">SaaS models scale across schools, studios & indie creators</p>
                 </div>
               </div>
             </div>
@@ -103,35 +138,115 @@ const PitchDeck = () => {
     // Slide 4: Solution
     {
       component: () => (
-        <div className="px-12 py-6">
-          <h2 className="text-4xl font-bold text-white mb-10">Solution & Product</h2>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-6 rounded-xl border border-green-500/30">
-              <Cpu className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">AI Script Breakdown</h3>
-              <p className="text-gray-300 text-base">Identify characters, scenes, props & sets automatically</p>
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-10">Solution & Product</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <Cpu className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">AI Script Breakdown</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Identify characters, scenes, props & sets automatically</p>
             </div>
-            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-6 rounded-xl border border-green-500/30">
-              <Zap className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Smart Shotlists</h3>
-              <p className="text-gray-300 text-base">Generate detailed shot lists with durations & departments</p>
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <Zap className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Smart Shotlists</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Generate detailed shot lists with durations & departments</p>
             </div>
-            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-6 rounded-xl border border-green-500/30">
-              <Film className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Visual Storyboards</h3>
-              <p className="text-gray-300 text-base">Create AI-assisted storyboards for each scene</p>
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <Film className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Visual Storyboards</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Create AI-assisted storyboards for each scene</p>
             </div>
-            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-6 rounded-xl border border-green-500/30">
-              <Users className="w-10 h-10 text-green-400 mb-3" />
-              <h3 className="text-xl font-bold text-white mb-2">Collaborative Platform</h3>
-              <p className="text-gray-300 text-base">Invite teams, comment, and iterate in real-time</p>
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <Users className="w-8 h-8 sm:w-10 md:h-10 text-green-400 mb-2 sm:mb-3" />
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Collaborative Platform</h3>
+              <p className="text-gray-300 text-sm sm:text-base">Invite teams, comment, and iterate in real-time</p>
             </div>
           </div>
         </div>
       )
     },
 
-    // Slide 5: Market Size
+    // Slide 5: Scalability
+    {
+      component: () => (
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-10">Built to Scale</h2>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-blue-500/30">
+              <div className="flex items-start">
+                <div className="bg-blue-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">1</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Auto-Scaling Infrastructure</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">Current infrastructure is highly scalable and auto-scales with growing users. Completely hands-off, ensuring seamless performance as we grow from hundreds to thousands of concurrent users.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-purple-500/30">
+              <div className="flex items-start">
+                <div className="bg-purple-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">2</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Modular & Swappable AI Stack</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">Modular and swappable structure for all in-app AI operations. We can switch to the latest and greatest models within days of new model launches, ensuring we always deliver cutting-edge performance.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <div className="flex items-start">
+                <div className="bg-green-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">3</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Enterprise-Grade Backend</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">Supabase as backend, currently on Pro plan, soon to switch to Enterprise with Service Level Agreement and 99.99% uptime guarantee. Full digital privacy compliance and data protection.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 6: User Feedback
+    {
+      component: () => (
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-10">We Value User Feedback</h2>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
+              <div className="flex items-start">
+                <div className="bg-green-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">1</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Non-Invasive Feedback Collection</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">All in-app operations end with a small, non-invasive feedback card, giving us a clear idea of what users love and what needs work. Every interaction is an opportunity to improve.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-blue-500/30">
+              <div className="flex items-start">
+                <div className="bg-blue-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">2</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Rapid Development Cycles</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">Rapid dev cycles ensure that new features are shipped quickly. Users are informed of new versions with full changelog, keeping them in the loop on every improvement.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-purple-500/30">
+              <div className="flex items-start">
+                <div className="bg-purple-500 text-white font-bold text-base sm:text-lg py-1 sm:py-2 px-2 sm:px-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">3</div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Transparent Product Evolution</h3>
+                  <p className="text-gray-300 text-sm sm:text-base">Changelog viewable inside the app. <span className="text-purple-400 font-bold">40+ updates</span> pushed between January 2025 to June 2025, showing our commitment to continuous improvement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 7: Market Size
     {
       component: () => {
         const marketData = [
@@ -183,7 +298,7 @@ const PitchDeck = () => {
       }
     },
 
-    // Slide 6: Why Pre-Production
+    // Slide 8: Why Pre-Production
     {
       component: () => (
         <div className="px-12 py-6">
@@ -211,7 +326,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 7: Competitive Landscape
+    // Slide 9: Competitive Landscape
     {
       component: () => (
         <div className="px-12 py-6">
@@ -258,7 +373,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 8: Traction
+    // Slide 10: Traction
     {
       component: () => {
         const tractionData = [
@@ -310,7 +425,7 @@ const PitchDeck = () => {
       }
     },
 
-    // Slide 9: Sample Processing Costs
+    // Slide 11: Sample Processing Costs
     {
       component: () => (
         <div className="px-12 py-4">
@@ -384,7 +499,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 10: Revenue Model
+    // Slide 12: Revenue Model
     {
       component: () => (
         <div className="px-12 py-6">
@@ -426,7 +541,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 11: Profit Margins
+    // Slide 13: Profit Margins
     {
       component: () => {
         const profitData = [
@@ -456,7 +571,7 @@ const PitchDeck = () => {
       }
     },
 
-    // Slide 12: Revenue Projections
+    // Slide 14: Revenue Projections
     {
       component: () => {
         const revenueData = [
@@ -501,7 +616,7 @@ const PitchDeck = () => {
       }
     },
 
-    // Slide 13: Go-to-Market
+    // Slide 15: Go-to-Market
     {
       component: () => (
         <div className="px-12 py-6">
@@ -530,7 +645,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 14: Roadmap
+    // Slide 16: Roadmap
     {
       component: () => (
         <div className="px-12 py-4">
@@ -583,7 +698,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 15: Funding
+    // Slide 17: Funding
     {
       component: () => (
         <div className="px-12 py-6">
@@ -612,7 +727,7 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 16: Team
+    // Slide 18: Team
     {
       component: () => (
         <div className="px-12 py-6">
@@ -659,30 +774,30 @@ const PitchDeck = () => {
       )
     },
 
-    // Slide 17: The Ask
+    // Slide 19: The Ask
     {
       component: () => (
-        <div className="flex flex-col items-center justify-center text-center px-12">
-          <Film className="w-20 h-20 text-green-400 mb-6" />
-          <h2 className="text-5xl font-bold text-white mb-6">Join Us in Transforming Pre-Production</h2>
-          <p className="text-2xl text-gray-300 mb-8">ShotFlux™ enables filmmakers to spend more time on creativity and less on paperwork</p>
+        <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-12">
+          <Film className="w-16 h-16 sm:w-20 md:h-20 text-green-400 mb-4 sm:mb-6" />
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Join Us in Transforming Pre-Production</h2>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-6 sm:mb-8">ShotFlux™ enables filmmakers to spend more time on creativity and less on paperwork</p>
           
-          <div className="bg-gradient-to-r from-green-900/40 to-gray-800 p-8 rounded-2xl border-2 border-green-500 mb-8 max-w-3xl">
-            <p className="text-xl text-white mb-3">We are raising</p>
-            <p className="text-6xl font-bold text-green-400 mb-3">₹4-4.5 Cr</p>
-            <p className="text-xl text-gray-300 mb-4">~$480k-550k in Seed Capital</p>
-            <p className="text-base text-gray-400">18 months to 3000 users • ~$100K monthly revenue</p>
+          <div className="bg-gradient-to-r from-green-900/40 to-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-green-500 mb-6 sm:mb-8 max-w-3xl w-full">
+            <p className="text-lg sm:text-xl text-white mb-2 sm:mb-3">We are raising</p>
+            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-2 sm:mb-3">₹4-4.5 Cr</p>
+            <p className="text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">~$480k-550k in Seed Capital</p>
+            <p className="text-sm sm:text-base text-gray-400">18 months to 3000 users • ~$100K monthly revenue</p>
           </div>
 
-          <div className="space-y-4">
-            <p className="text-xl text-white">Reach out for a demo, pilot programme or investment discussion</p>
-            <p className="text-2xl font-bold text-green-400">Abhishek Sharma: 9867659005</p>
-            <p className="text-base text-gray-400">founders@shotflux.com • www.shotflux.com</p>
+          <div className="space-y-3 sm:space-y-4 w-full max-w-2xl">
+            <p className="text-lg sm:text-xl md:text-2xl text-white">Reach out for a demo, pilot programme or investment discussion</p>
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold text-green-400">Abhishek Sharma: 9867659005</p>
+            <p className="text-sm sm:text-base text-gray-400">founders@shotflux.com • www.shotflux.com</p>
             
-            <div className="flex gap-5 justify-center mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center mt-4 sm:mt-6">
               <a 
                 href="tel:+919867659005"
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-xl text-xl transition-all transform hover:scale-105 shadow-lg"
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
               >
                 📞 Call Now
               </a>
@@ -690,7 +805,7 @@ const PitchDeck = () => {
                 href="https://shotflux.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-xl text-xl transition-all transform hover:scale-105 shadow-lg"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
               >
                 🚀 Try It Out
               </a>
@@ -713,25 +828,26 @@ const PitchDeck = () => {
       </div>
 
       {/* Navigation Bar - fixed at bottom */}
-      <div className="bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 px-6 py-3 flex items-center justify-between flex-shrink-0">
+      <div className="bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 px-3 sm:px-6 py-2 sm:py-3 flex items-center justify-between flex-shrink-0">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}
-          className={`flex items-center gap-2 px-5 py-2 rounded-lg font-semibold transition-all ${
+          className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2 rounded-lg font-semibold text-xs sm:text-sm transition-all ${
             currentSlide === 0
               ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
               : 'bg-green-500 hover:bg-green-600 text-white'
           }`}
         >
-          <ChevronLeft className="w-4 h-4" />
-          Previous
+          <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
+          <span className="hidden sm:inline">Previous</span>
+          <span className="sm:hidden">Prev</span>
         </button>
 
-        <div className="flex items-center gap-3">
-          <span className="text-gray-400 text-sm">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="text-gray-400 text-xs sm:text-sm">
             {currentSlide + 1} / {slides.length}
           </span>
-          <div className="flex gap-1">
+          <div className="hidden sm:flex gap-1">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -749,14 +865,15 @@ const PitchDeck = () => {
         <button
           onClick={nextSlide}
           disabled={currentSlide === slides.length - 1}
-          className={`flex items-center gap-2 px-5 py-2 rounded-lg font-semibold transition-all ${
+          className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2 rounded-lg font-semibold text-xs sm:text-sm transition-all ${
             currentSlide === slides.length - 1
               ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
               : 'bg-green-500 hover:bg-green-600 text-white'
           }`}
         >
-          Next
-          <ChevronRight className="w-4 h-4" />
+          <span className="hidden sm:inline">Next</span>
+          <span className="sm:hidden">Next</span>
+          <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
         </button>
       </div>
     </div>
