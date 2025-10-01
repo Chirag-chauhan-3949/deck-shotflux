@@ -907,7 +907,7 @@ const setMetaTag = (
                 href="https://shotflux.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 sm:px-8 rounded-xl text-lg sm:text-xl transition-all transform hover:scale-105 shadow-lg"
               >
               Try It Out
               </a>
