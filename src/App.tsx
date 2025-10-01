@@ -1,3 +1,4 @@
+// Update one 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Users, Target, Cpu, TrendingUp, DollarSign, Film, Zap, Award } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
@@ -8,34 +9,6 @@ const PitchDeck = () => {
   // Add custom scrollbar styles
   useEffect(() => {
     const style = document.createElement('style');
-    style.textContent = `
-      /* Custom scrollbar for webkit browsers */
-      ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-      }
-      
-      ::-webkit-scrollbar-track {
-        background: #1f2937;
-        border-radius: 10px;
-      }
-      
-      ::-webkit-scrollbar-thumb {
-        background: #10b981;
-        border-radius: 10px;
-        border: 2px solid #1f2937;
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
-        background: #059669;
-      }
-      
-      /* Custom scrollbar for Firefox */
-      * {
-        scrollbar-width: thin;
-        scrollbar-color: #10b981 #1f2937;
-      }
-    `;
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
   }, []);
