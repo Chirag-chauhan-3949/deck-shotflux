@@ -4,8 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 
 const PitchDeck = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideDirection, setSlideDirection] = useState('next');
 
-  // Add custom scrollbar styles
+  // Add custom scrollbar styles and transitions
   useEffect(() => {
   const style = document.createElement("style");
   document.head.appendChild(style);
@@ -58,8 +59,15 @@ const setMetaTag = (
     setMetaTag('twitter:description', 'We are raising funds to get to 3000 monthly active paying users in 18 months.');
   }, []);
 
-  const nextSlide = () => setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
-  const prevSlide = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
+  const nextSlide = () => {
+    setSlideDirection('next');
+    setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
+  };
+  
+  const prevSlide = () => {
+    setSlideDirection('prev');
+    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+  };
 
   const slides = [
     // Slide 1: Title
@@ -443,7 +451,7 @@ const setMetaTag = (
       }
     },
 
-    // Slide 11: Sample Processing Costs (WITH TOTALS)
+    // Slide 11: Sample Processing Costs
     {
       component: () => (
         <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
@@ -508,14 +516,6 @@ const setMetaTag = (
                   <td className="p-2 text-center text-gray-300">0.64</td>
                   <td className="p-2 text-center text-green-400">1.45</td>
                   <td className="p-2 text-center text-green-400 font-bold">226%</td>
-                </tr>
-                <tr className="border-t-2 border-green-500 bg-green-900/20">
-                  <td className="p-2 text-white font-bold">TOTAL</td>
-                  <td className="p-2 text-center text-white font-bold">262</td>
-                  <td className="p-2 text-center text-white font-bold">4.72</td>
-                  <td className="p-2 text-center text-white font-bold">0.99</td>
-                  <td className="p-2 text-center text-green-400 font-bold">3.73</td>
-                  <td className="p-2 text-center text-green-400 font-bold">377%</td>
                 </tr>
               </tbody>
             </table>
@@ -736,7 +736,7 @@ const setMetaTag = (
       )
     },
 
-    // Slide 17: Funding (WITH ADDITIONAL COSTS AND BUFFER)
+    // Slide 17: Funding - Monthly
     {
       component: () => (
         <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
@@ -747,7 +747,7 @@ const setMetaTag = (
             <p className="text-xl sm:text-2xl text-gray-300">~$550k-600k in Seed Capital</p>
             <p className="text-sm sm:text-base text-gray-400 mt-3 sm:mt-4">18 months of runway to reach 3000+ active paying users/month</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-5">
             <div className="bg-gray-800 p-4 sm:p-5 rounded-lg text-center">
               <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹6.55L</p>
               <p className="text-gray-300 text-xs sm:text-sm">Marketing & Growth/month</p>
@@ -761,33 +761,68 @@ const setMetaTag = (
               <p className="text-gray-300 text-xs sm:text-sm">Total Monthly Burn</p>
             </div>
           </div>
+        </div>
+      )
+    },
+
+    // NEW SLIDE: One-Time Capital Costs
+    {
+      component: () => (
+        <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">One-Time Capital for Growth & Scale</h2>
+          <p className="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">One-Time / Campaign-Based Costs (Non-Recurring)</p>
           
-          {/* NEW: Additional Costs and Buffer */}
-          <div className="bg-gray-800/50 p-4 sm:p-6 rounded-xl border border-yellow-500/30">
-            <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-4">Additional Costs and Buffer</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Customer Support & Community Ops</h4>
-                <ul className="text-xs sm:text-sm text-gray-300 space-y-1 ml-4">
-                  <li>• Hiring 1–2 support/community managers after launch (~₹1L–₹1.5L/month total)</li>
-                  <li>• Essential for retention, especially for SaaS & filmmakers.</li>
-                </ul>
-              </div>
+          <div className="table-container overflow-x-auto mb-4">
+            <table className="w-full text-xs sm:text-sm min-w-[600px]">
+              <thead className="bg-gray-800">
+                <tr>
+                  <th className="text-left p-2 sm:p-3 font-bold text-white">Category</th>
+                  <th className="text-left p-2 sm:p-3 font-bold text-white">Cost (INR)</th>
+                  <th className="text-left p-2 sm:p-3 font-bold text-white">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t border-gray-700">
+                  <td className="p-2 sm:p-3 text-white font-semibold">Content & Media Production</td>
+                  <td className="p-2 sm:p-3 text-green-400 font-bold">₹10,00,000</td>
+                  <td className="p-2 sm:p-3 text-gray-300">Educational videos, promos, launch content</td>
+                </tr>
+                <tr className="border-t border-gray-700 bg-gray-800/50">
+                  <td className="p-2 sm:p-3 text-white font-semibold">Product Development Upgrades</td>
+                  <td className="p-2 sm:p-3 text-green-400 font-bold">₹5,00,000–₹8,00,000</td>
+                  <td className="p-2 sm:p-3 text-gray-300">Major feature development, integrations, scaling architecture</td>
+                </tr>
+                <tr className="border-t border-gray-700">
+                  <td className="p-2 sm:p-3 text-white font-semibold">Legal & Compliance</td>
+                  <td className="p-2 sm:p-3 text-green-400 font-bold">₹1,00,000–₹2,00,000</td>
+                  <td className="p-2 sm:p-3 text-gray-300">Company structure, IP filings, contracts, privacy policy, T&C</td>
+                </tr>
+                <tr className="border-t border-gray-700 bg-gray-800/50">
+                  <td className="p-2 sm:p-3 text-white font-semibold">Branding & Launch Collateral</td>
+                  <td className="p-2 sm:p-3 text-green-400 font-bold">₹1,00,000–₹2,00,000</td>
+                  <td className="p-2 sm:p-3 text-gray-300">Visual identity upgrade, website, launch events, PR kits, marketing material</td>
+                </tr>
+                <tr className="border-t border-gray-700">
+                  <td className="p-2 sm:p-3 text-white font-semibold">Initial Agency Retainer (whirlwind.co.in)</td>
+                  <td className="p-2 sm:p-3 text-green-400 font-bold">₹2,00,000</td>
+                  <td className="p-2 sm:p-3 text-gray-300">Digital marketing setup & launch campaign</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-900/20 to-gray-800 p-4 sm:p-6 rounded-xl border border-purple-500/30 mt-4">
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Additional Costs and Buffer</h3>
+            <div className="space-y-2 text-gray-300 text-xs sm:text-sm">
+              <p className="font-semibold text-white">Customer Support & Community Ops</p>
+              <p>• Hiring 1–2 support/community managers after launch (~₹1L–₹1.5L/month total)</p>
+              <p>• Essential for retention, especially for SaaS & filmmakers.</p>
               
-              <div>
-                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Partnerships & Events Budget</h4>
-                <ul className="text-xs sm:text-sm text-gray-300 space-y-1 ml-4">
-                  <li>• Workshops, filmmaker summits, co-branded events, influencer collabs.</li>
-                </ul>
-              </div>
+              <p className="font-semibold text-white mt-3">Partnerships & Events Budget</p>
+              <p>• Workshops, filmmaker summits, co-branded events, influencer collabs.</p>
               
-              <div>
-                <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Contingency for AI Model Costs & API Changes</h4>
-                <ul className="text-xs sm:text-sm text-gray-300 space-y-1 ml-4">
-                  <li>• AI platforms can increase prices or usage may spike → budget 10–15% buffer for infra.</li>
-                </ul>
-              </div>
+              <p className="font-semibold text-white mt-3">Contingency for AI Model Costs & API Changes</p>
+              <p>• AI platforms can increase prices or usage may spike → budget 10–15% buffer for infra.</p>
             </div>
           </div>
         </div>
@@ -889,7 +924,10 @@ const setMetaTag = (
     <div className="w-screen h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white flex flex-col overflow-hidden">
       {/* Main Content - takes remaining space with proper scrolling */}
       <div className="flex-1 overflow-y-auto flex items-start sm:items-center justify-center p-2 sm:p-4">
-        <div className="w-full max-w-7xl my-4 sm:my-0">
+        <div 
+          key={currentSlide} 
+          className={`w-full max-w-7xl my-4 sm:my-0 slide-enter-${slideDirection}`}
+        >
           <SlideComponent />
         </div>
       </div>
@@ -918,7 +956,10 @@ const setMetaTag = (
             {slides.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => {
+                  setSlideDirection(index > currentSlide ? 'next' : 'prev');
+                  setCurrentSlide(index);
+                }}
                 className={`h-2 rounded-full transition-all ${
                   index === currentSlide
                     ? 'w-8 bg-green-500'
