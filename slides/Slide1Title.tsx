@@ -21,7 +21,7 @@ const Slide1Title = () => {
         </span>
         that saves{" "}
         <span className="text-white font-semibold">
-          over 80% of time and costs
+          over 80% of time and costs{" "}
         </span>
         for both professionals and passionate filmmakers.
       </p>
