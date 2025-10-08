@@ -39,7 +39,7 @@ const PitchDeck: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [slideDirection, setSlideDirection] = useState<'next' | 'prev'>('next');
 
-  // Custom scrollbar styles and animations injected once
+  // Inject custom styles/animations once
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
@@ -151,7 +151,7 @@ const PitchDeck: React.FC = () => {
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
 
-  // Keyboard controls (listen once; slide change handled via setter)
+  // Keyboard controls
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
@@ -164,7 +164,6 @@ const PitchDeck: React.FC = () => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-    // intentionally not adding currentSlide so handler reference doesn't re-bind frequently
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -198,38 +197,39 @@ const PitchDeck: React.FC = () => {
         </div>
       </div>
 
-      {/* Navigation Bar - fixed at bottom and mobile-safe */}
+      {/* Navigation Bar - fixed at bottom and mobile friendly */}
       <div
         className="fixed bottom-0 left-0 right-0 z-50"
         style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       >
         <div
-          className="bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between"
+          className="bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between"
           role="navigation"
           aria-label="Slide navigation"
         >
+          {/* Previous button */}
           <button
             onClick={prevSlide}
             disabled={currentSlide === 0}
             aria-disabled={currentSlide === 0}
             aria-label="Previous slide"
-            className={`flex items-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm ${
+            className={`flex items-center justify-center gap-2 w-28 sm:w-auto px-4 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm ${
               currentSlide === 0
                 ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
                 : 'bg-green-500 hover:bg-green-600 text-white'
             }`}
-            style={{ minWidth: 72 }}
           >
             <ChevronLeft className="w-4 h-4" />
+            <span className="text-white sm:hidden">Prev</span>
             <span className="hidden sm:inline">Previous</span>
           </button>
 
+          {/* Slide count + dots */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <span className="text-gray-400 text-sm sm:text-base">
+            <span className="text-gray-400 text-sm sm:text-base font-medium">
               {currentSlide + 1} / {slides.length}
             </span>
 
-            {/* dot progress - hidden on small screens to avoid crowding */}
             <div className="hidden sm:flex gap-1">
               {slides.map((_, index) => (
                 <button
@@ -248,18 +248,19 @@ const PitchDeck: React.FC = () => {
             </div>
           </div>
 
+          {/* Next button */}
           <button
             onClick={nextSlide}
             disabled={currentSlide === slides.length - 1}
             aria-disabled={currentSlide === slides.length - 1}
             aria-label="Next slide"
-            className={`flex items-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm ${
+            className={`flex items-center justify-center gap-2 w-28 sm:w-auto px-4 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm ${
               currentSlide === slides.length - 1
                 ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
                 : 'bg-green-500 hover:bg-green-600 text-white'
             }`}
-            style={{ minWidth: 72 }}
           >
+            <span className="text-white sm:hidden">Next</span>
             <span className="hidden sm:inline">Next</span>
             <ChevronRight className="w-4 h-4" />
           </button>
