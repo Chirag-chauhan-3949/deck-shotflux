@@ -1,5 +1,5 @@
-import React from 'react';
-import { DollarSign, Shield, Palette, Video, Users } from 'lucide-react';
+
+import { DollarSign, Shield, Users } from 'lucide-react';
 
 const Slide18OneTimeCapitalCosts = () => {
   return (

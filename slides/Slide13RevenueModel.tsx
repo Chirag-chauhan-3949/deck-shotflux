@@ -1,5 +1,5 @@
-import React from 'react';
-import { DollarSign, TrendingUp, Users, CreditCard } from 'lucide-react';
+
+import { DollarSign, TrendingUp } from 'lucide-react';
 
 const Slide12RevenueModel = () => {
   return (

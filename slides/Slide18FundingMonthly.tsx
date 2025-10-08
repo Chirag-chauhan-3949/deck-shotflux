@@ -1,5 +1,3 @@
-import React from 'react';
-import { Calendar, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const Slide17FundingMonthly = () => {
   return (

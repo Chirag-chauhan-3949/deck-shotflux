@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MessageSquare, Target, TrendingUp, Users } from 'lucide-react';
 
 const Slide23SubredditsGTMPart1 = () => {
   const [filterType, setFilterType] = useState('All');
-  const [hoveredRow, setHoveredRow] = useState(null);
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
 
   const subreddits = [
     {
@@ -191,7 +191,7 @@ const Slide23SubredditsGTMPart1 = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style >{`
         @keyframes fadeInRow {
           from {
             opacity: 0;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Youtube, TrendingUp, DollarSign, Target } from 'lucide-react';
 
 const Slide22YouTubeChannels = () => {
-  const [hoveredRow, setHoveredRow] = useState(null);
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
 
   const channels = [
     {
@@ -235,7 +235,7 @@ const Slide22YouTubeChannels = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style >{`
         @keyframes fadeInRow {
           from {
             opacity: 0;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   Slide1Title,
@@ -8,7 +8,6 @@ import {
   Slide5Financials,
   Slide6CustomerGrowth,
   Slide7UnitEconomics,
-  Slide8FundingAsk,
   Slide9ConversionFunnel,
   Slide10AffiliateModel,
   Slide11WhyPreProduction,

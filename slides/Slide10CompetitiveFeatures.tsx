@@ -1,5 +1,4 @@
-import React from 'react';
-import { BarChart3, DollarSign, Zap, Users, Crown, Trophy } from 'lucide-react';
+import {  DollarSign,  Crown, Trophy } from 'lucide-react';
 
 const Slide10CompetitiveFeatures = () => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, TrendingUp, Users, Target, Zap } from 'lucide-react';
 
 const Slide26CROImpact = () => {
@@ -231,7 +231,7 @@ const Slide26CROImpact = () => {
       </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes slideIn {
           from {
             opacity: 0;

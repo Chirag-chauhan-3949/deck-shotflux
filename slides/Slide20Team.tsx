@@ -1,5 +1,5 @@
-import React from 'react';
-import { Users, Award, Target, Cpu, TrendingUp } from 'lucide-react';
+
+import { Users, Award, Target,  } from 'lucide-react';
 
 const Slide19Team = () => {
   return (

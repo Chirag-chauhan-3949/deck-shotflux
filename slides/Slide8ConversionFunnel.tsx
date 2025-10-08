@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Users, MousePointerClick, UserCheck, CreditCard } from 'lucide-react';
 
 const Slide8ConversionFunnel = () => {
@@ -108,7 +108,7 @@ const Slide8ConversionFunnel = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes fadeIn {
           from {
             opacity: 0;

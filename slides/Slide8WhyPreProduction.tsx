@@ -1,5 +1,4 @@
-import React from 'react';
-import { Zap, DollarSign, BarChart3, Palette } from 'lucide-react';
+
 
 const Slide8WhyPreProduction = () => {
   return (

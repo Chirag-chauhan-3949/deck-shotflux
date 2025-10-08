@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   FileText,
   CheckSquare,
@@ -198,7 +198,7 @@ const Slide4WorkflowVisualization = () => {
       </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes slideIn {
           from {
             opacity: 0;

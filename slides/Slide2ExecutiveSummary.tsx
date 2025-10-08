@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Users, Target, Cpu, TrendingUp } from 'lucide-react';
 
 const Slide2ExecutiveSummary = () => {

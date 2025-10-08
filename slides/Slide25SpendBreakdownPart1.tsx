@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { TrendingUp, Users, Zap, Shield, Wrench } from 'lucide-react';
 
@@ -26,19 +26,24 @@ const Slide25SpendBreakdownPart1 = () => {
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
-                  data={spendData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-                  outerRadius={100}
-                  fill="#8884d8"
-                  dataKey="value"
-                >
-                  {spendData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
+  data={spendData}
+  cx="50%"
+  cy="50%"
+  labelLine={false}
+  // type the destructured props and guard percent before using it
+  label={({ name, percent }: { name?: string; percent?: number }) => {
+    const p = Number(percent ?? 0);               // ensure a number
+    return `${name ?? ""}: ${(p * 100).toFixed(0)}%`;
+  }}
+  outerRadius={100}
+  fill="#8884d8"
+  dataKey="value"
+>
+  {spendData.map((_entry, index) => (           // mark entry as unused with _
+    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+  ))}
+</Pie>
+
                 <Tooltip
                   contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #10B981' }}
                   formatter={(value) => [`${value}%`]}
@@ -86,7 +91,7 @@ const Slide25SpendBreakdownPart1 = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         @keyframes slideIn {
           from {
             opacity: 0;

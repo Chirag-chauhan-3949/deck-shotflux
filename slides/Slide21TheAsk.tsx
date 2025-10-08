@@ -1,5 +1,5 @@
-import React from 'react';
-import { TrendingUp, Users, DollarSign, Calendar, Target } from 'lucide-react';
+
+import { TrendingUp, Users, DollarSign, Target } from 'lucide-react';
 
 const Slide20TheAsk = () => {
   return (
