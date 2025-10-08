@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   Slide1Title,
@@ -32,7 +32,7 @@ import {
   Slide30Team,
   Slide31FundingAskFinal,
   Slide32TheAsk
-} from "../slides";
+} from '../slides';
 
 const PitchDeck = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -154,12 +154,12 @@ const PitchDeck = () => {
       }
 
       /* Stagger effect utilities */
-      .stagger-1 { animation-delay: 0.1s; }
-      .stagger-2 { animation-delay: 0.2s; }
-      .stagger-3 { animation-delay: 0.3s; }
-      .stagger-4 { animation-delay: 0.4s; }
-      .stagger-5 { animation-delay: 0.5s; }
-      .stagger-6 { animation-delay: 0.6s; }
+      .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+      .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+      .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+      .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+      .stagger-5 { animation-delay: 0.5s; opacity: 0; }
+      .stagger-6 { animation-delay: 0.6s; opacity: 0; }
 
       /* Hover microanimations */
       .hover-lift {
@@ -226,6 +226,38 @@ const PitchDeck = () => {
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
   };
 
+  // Keyboard controls
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        prevSlide();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentSlide]);
+
+  // Touch/Click controls for left and right sides
+  const handleSlideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, currentTarget } = e;
+    const { left, width } = currentTarget.getBoundingClientRect();
+    const clickX = clientX - left;
+
+    // If clicked on left third, go previous
+    if (clickX < width / 3) {
+      prevSlide();
+    }
+    // If clicked on right two-thirds, go next
+    else if (clickX > width / 3) {
+      nextSlide();
+    }
+  };
+
   const slides = [
     { component: Slide1Title },
     { component: Slide2ExecutiveSummary },
@@ -265,12 +297,17 @@ const PitchDeck = () => {
   return (
     <div className="w-screen h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white flex flex-col overflow-hidden">
       {/* Main Content - takes remaining space with proper scrolling */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden p-2 sm:p-4">
+      <div
+        className="flex-1 overflow-y-auto overflow-x-hidden p-2 sm:p-4 cursor-pointer"
+        onClick={handleSlideClick}
+      >
         <div
           key={currentSlide}
-          className={`w-full max-w-7xl mx-auto h-full slide-enter-${slideDirection}`}
+          className={`w-full max-w-7xl mx-auto min-h-full flex items-center slide-enter-${slideDirection}`}
         >
-          <SlideComponent />
+          <div className="w-full py-4">
+            <SlideComponent />
+          </div>
         </div>
       </div>
 
