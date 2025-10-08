@@ -18,7 +18,7 @@ const Slide4Financials = () => {
       
       <div className="bg-gradient-to-r from-green-900/30 to-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-green-500/50 mb-6 sm:mb-8">
         <p className="text-xl sm:text-2xl text-white mb-3 sm:mb-4">Funding Target</p>
-        <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-3 sm:mb-4">₹1.0-1.5 Cr</p>
+        <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-3 sm:mb-4">₹1.25 Cr</p>
         <p className="text-xl sm:text-2xl text-gray-300">6-Month Runway</p>
         <p className="text-sm sm:text-base text-gray-400 mt-3 sm:mt-4">Conservative projections with healthy buffer</p>
       </div>
