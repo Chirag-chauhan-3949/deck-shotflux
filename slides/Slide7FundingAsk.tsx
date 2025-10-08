@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { DollarSign, TrendingUp, Users } from 'lucide-react';
 
 const Slide7FundingAsk = () => {

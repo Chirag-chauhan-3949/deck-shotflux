@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { TrendingUp, Users, Zap, Shield, Wrench } from 'lucide-react';
 
@@ -17,7 +17,7 @@ const Slide25SpendBreakdownPart1 = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6 h-full flex flex-col">
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Funding Allocation Overview</h2>
-      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹1.3 Crore</span></p>
+      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹1.25 Crore</span></p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-1">
         <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30 flex flex-col">
@@ -26,24 +26,19 @@ const Slide25SpendBreakdownPart1 = () => {
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
-  data={spendData}
-  cx="50%"
-  cy="50%"
-  labelLine={false}
-  // type the destructured props and guard percent before using it
-  label={({ name, percent }: { name?: string; percent?: number }) => {
-    const p = Number(percent ?? 0);               // ensure a number
-    return `${name ?? ""}: ${(p * 100).toFixed(0)}%`;
-  }}
-  outerRadius={100}
-  fill="#8884d8"
-  dataKey="value"
->
-  {spendData.map((_entry, index) => (           // mark entry as unused with _
-    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-  ))}
-</Pie>
-
+                  data={spendData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                  outerRadius={100}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {spendData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
                 <Tooltip
                   contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #10B981' }}
                   formatter={(value) => [`${value}%`]}
@@ -91,7 +86,7 @@ const Slide25SpendBreakdownPart1 = () => {
         </div>
       </div>
 
-      <style >{`
+      <style>{`
         @keyframes slideIn {
           from {
             opacity: 0;

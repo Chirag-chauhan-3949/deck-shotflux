@@ -1,5 +1,5 @@
-
-import { TrendingUp, Users, DollarSign, Target } from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, DollarSign, Calendar, Target } from 'lucide-react';
 
 const Slide20TheAsk = () => {
   return (
@@ -25,7 +25,7 @@ const Slide20TheAsk = () => {
               <div className="border-t border-gray-600 pt-3">
                 <div className="flex justify-between items-center">
                   <span className="text-white font-bold text-base sm:text-lg">Total Funding Ask</span>
-                  <span className="text-green-400 font-bold text-xl sm:text-2xl">₹1.3 Crore</span>
+                  <span className="text-green-400 font-bold text-xl sm:text-2xl">₹1.25 Crore</span>
                 </div>
                 <p className="text-xs text-gray-400 mt-1">~$156,000 USD</p>
               </div>

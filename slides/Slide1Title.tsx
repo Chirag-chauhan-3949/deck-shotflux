@@ -1,8 +1,9 @@
+import React from "react";
 import { Film } from "lucide-react";
 
 const Slide1Title = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8">
+    <div className="flex flex-col items-center justify-center text-center px-4 sm:px-8 py-8">
       <Film className="w-16 h-16 sm:w-20 md:w-24 text-green-400 mb-4 sm:mb-6" />
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-3 sm:mb-4">
         ShotFlux™

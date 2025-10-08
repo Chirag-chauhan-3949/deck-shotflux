@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
 const Slide15GoToMarket = () => {
   return (

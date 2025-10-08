@@ -1,5 +1,5 @@
-
-import { Trophy, Users, Target, Zap, TrendingUp, DollarSign, Crown } from 'lucide-react';
+import React from 'react';
+import { Trophy, Users, Target, Zap, BarChart3, TrendingUp, DollarSign, Crown } from 'lucide-react';
 
 const Slide9CompetitiveOverview = () => {
   return (

@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { TrendingUp, DollarSign, Award } from 'lucide-react';
 
@@ -23,11 +23,7 @@ const Slide24CACvsLTV = () => {
               <YAxis stroke="#9CA3AF" label={{ value: '₹ (in thousands)', angle: -90, position: 'insideLeft', fill: '#9CA3AF' }} />
               <Tooltip
                 contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #10B981' }}
-                formatter={(value, name) => {
-  const num = typeof value === "number" ? value : Number(value);
-  return [`${num.toFixed(1)}k`, name];
-}}
-
+                formatter={(value, name) => [value.toFixed(1) + 'k', name]}
               />
               <Bar dataKey="value" radius={[8, 8, 0, 0]}>
                 {data.map((entry, index) => (
@@ -175,7 +171,7 @@ const Slide24CACvsLTV = () => {
       </div>
       </div>
 
-      <style >{`
+      <style>{`
         @keyframes slideUp {
           from {
             opacity: 0;

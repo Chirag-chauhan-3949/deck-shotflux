@@ -267,7 +267,7 @@ const Slide23SubredditsGTM = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInRow {
           from {
             opacity: 0;

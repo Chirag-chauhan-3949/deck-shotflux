@@ -1,3 +1,5 @@
+import React from 'react';
+import { Calendar, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const Slide17FundingMonthly = () => {
   return (
@@ -102,8 +104,8 @@ const Slide17FundingMonthly = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
         <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-blue-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Total Funding Ask</h3>
-          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹1.3 Crore</p>
-          <p className="text-gray-400 text-xs sm:text-sm">6-month runway (~$156k USD)</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹1.25 Crore</p>
+          <p className="text-gray-400 text-xs sm:text-sm">6-month runway (~$150k USD)</p>
         </div>
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-purple-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Total Revenue (6M)</h3>

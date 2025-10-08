@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Users, TrendingUp, Calendar, CheckCircle } from 'lucide-react';
 
 const Slide10Traction = () => {

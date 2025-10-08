@@ -1,5 +1,5 @@
-
-import { TrendingUp, Users, DollarSign} from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, DollarSign, Calendar } from 'lucide-react';
 
 const Slide14RevenueProjections = () => {
   return (

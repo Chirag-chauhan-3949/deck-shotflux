@@ -8,6 +8,7 @@ import {
   Slide5Financials,
   Slide6CustomerGrowth,
   Slide7UnitEconomics,
+  Slide8FundingAsk,
   Slide9ConversionFunnel,
   Slide10AffiliateModel,
   Slide11WhyPreProduction,
@@ -32,7 +33,7 @@ import {
   Slide30Team,
   Slide31FundingAskFinal,
   Slide32TheAsk
-} from '../slides';
+} from './slides';
 
 const PitchDeck = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

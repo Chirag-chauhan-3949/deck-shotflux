@@ -1,5 +1,5 @@
-
-import {  Users, Zap,  BarChart3, TrendingUp } from 'lucide-react';
+import React from 'react';
+import { Calendar, Users, Zap, Shield, BarChart3, TrendingUp } from 'lucide-react';
 
 const Slide16Roadmap = () => {
   return (

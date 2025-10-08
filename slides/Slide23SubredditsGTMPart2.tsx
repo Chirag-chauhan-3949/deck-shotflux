@@ -1,9 +1,8 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 
 const Slide23SubredditsGTMPart2 = () => {
   const [filterType, setFilterType] = useState('All');
-  const [selectedRow, setSelectedRow] = useState<number | null>(null);
-
+  const [selectedRow, setSelectedRow] = useState(null);
 
   const subreddits = [
     {
@@ -232,7 +231,7 @@ const Slide23SubredditsGTMPart2 = () => {
         </div>
       </div>
 
-      <style >{`
+      <style>{`
         @keyframes fadeInRow {
           from {
             opacity: 0;

@@ -1,3 +1,5 @@
+import React from 'react';
+import { DollarSign, Calculator } from 'lucide-react';
 
 const Slide11SampleProcessingCosts = () => {
   return (
