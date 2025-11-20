@@ -35,7 +35,7 @@ const Slide7FundingAsk = () => {
 
       <div className="space-y-3 sm:space-y-4 w-full max-w-2xl">
         <p className="text-lg sm:text-xl md:text-2xl text-white">Strategic investment for exponential growth</p>
-        <p className="text-xl sm:text-2xl md:text-3xl font-bold text-green-400">Abhishek Sharma: 9867659005</p>
+        <p className="text-xl sm:text-2xl md:text-3xl font-bold text-green-400">Dushyant kiri: 9893511135</p>
         <p className="text-sm sm:text-base text-gray-400">founders@shotflux.com • www.shotflux.com</p>
         
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center mt-4 sm:mt-6">
