@@ -62,10 +62,10 @@ const NewSlide6Competition = () => {
               {features.map((feature, index) => (
                 <tr key={index} className={`border-t border-gray-700 ${index % 2 === 0 ? 'bg-gray-900/30' : 'bg-gray-900/50'}`}>
                   <td className="p-2 text-gray-300 text-xs">{feature.name}</td>
-                  <td className="p-2 text-center"><FeatureIcon value={feature.shotflux} /></td>
-                  <td className="p-2 text-center"><FeatureIcon value={feature.storyboarder} /></td>
-                  <td className="p-2 text-center"><FeatureIcon value={feature.boords} /></td>
-                  <td className="p-2 text-center"><FeatureIcon value={feature.ltx} /></td>
+                  <td className="p-2"><div className="flex justify-center items-center"><FeatureIcon value={feature.shotflux} /></div></td>
+                  <td className="p-2"><div className="flex justify-center items-center"><FeatureIcon value={feature.storyboarder} /></div></td>
+                  <td className="p-2"><div className="flex justify-center items-center"><FeatureIcon value={feature.boords} /></div></td>
+                  <td className="p-2"><div className="flex justify-center items-center"><FeatureIcon value={feature.ltx} /></div></td>
                 </tr>
               ))}
             </tbody>
