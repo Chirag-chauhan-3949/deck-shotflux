@@ -60,7 +60,7 @@ const NewSlide12ThankYou = () => {
 
       {/* Company Info */}
       <p className="text-gray-500 text-sm">
-        DATCRAZY LLP • Mumbai, India
+        Datcrazy LLP • B014 Babylon Tower, Raipur 492001 • +91-7898498881
       </p>
 
       <p className="text-green-400 font-semibold mt-6 text-lg">

@@ -38,7 +38,7 @@ const NewSlide1Title = () => {
       </div>
 
       <p className="text-xs sm:text-sm text-gray-500 mt-4">
-        Shotflux.com • DATCRAZY LLP • Mumbai, India
+        Shotflux.com • Datcrazy LLP • B014 Babylon Tower, Raipur 492001 • +91-7898498881
       </p>
     </div>
   );
