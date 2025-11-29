@@ -9,7 +9,7 @@ const NewSlide1Title = () => {
         ShotFlux™
       </h1>
       <p className="text-2xl sm:text-3xl text-gray-300 mb-2 sm:mb-3">
-        From Story to Film
+        From Script to Storyboards
       </p>
       <p className="text-xl sm:text-2xl text-green-400 mb-6 sm:mb-8 italic">
         In Minutes, Not Weeks
