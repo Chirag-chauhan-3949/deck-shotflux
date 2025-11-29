@@ -1,32 +1,15 @@
-export { default as Slide1Title } from './Slide1Title';
-export { default as Slide2ExecutiveSummary } from './Slide2ExecutiveSummary';
-export { default as Slide3Problem } from './Slide3Problem';
-export { default as Slide4WorkflowVisualization } from './Slide4WorkflowVisualization';
-export { default as Slide5Financials } from './Slide4Financials';
-export { default as Slide6CustomerGrowth } from './Slide5CustomerGrowth';
-export { default as Slide7UnitEconomics } from './Slide6UnitEconomics';
-export { default as Slide8FundingAsk } from './Slide7FundingAsk';
-export { default as Slide9ConversionFunnel } from './Slide8ConversionFunnel';
-export { default as Slide10AffiliateModel } from './Slide9AffiliateModel';
-export { default as Slide11WhyPreProduction } from './Slide8WhyPreProduction';
-export { default as Slide12CompetitiveOverview } from './Slide9CompetitiveOverview';
-export { default as Slide13CompetitiveFeatures } from './Slide10CompetitiveFeatures';
-export { default as Slide14Traction } from './Slide11Traction';
-export { default as Slide15SampleProcessingCosts } from './Slide12SampleProcessingCosts';
-export { default as Slide16RevenueModel } from './Slide13RevenueModel';
-export { default as Slide17ProfitMargins } from './Slide14ProfitMargins';
-export { default as Slide18RevenueProjections } from './Slide15RevenueProjections';
-export { default as Slide19GoToMarket } from './Slide16GoToMarket';
-export { default as Slide20Roadmap } from './Slide17Roadmap';
-export { default as Slide21FundingMonthly } from './Slide18FundingMonthly';
-export { default as Slide22OneTimeCapitalCosts } from './Slide19OneTimeCapitalCosts';
-export { default as Slide23YouTubeChannels } from './Slide22YouTubeChannels';
-export { default as Slide24SubredditsGTMPart1 } from './Slide23SubredditsGTMPart1';
-export { default as Slide25SubredditsGTMPart2 } from './Slide23SubredditsGTMPart2';
-export { default as Slide26CACvsLTV } from './Slide24CACvsLTV';
-export { default as Slide27SpendBreakdownPart1 } from './Slide25SpendBreakdownPart1';
-export { default as Slide28SpendBreakdownPart2 } from './Slide25SpendBreakdownPart2';
-export { default as Slide29CROImpact } from './Slide26CROImpact';
-export { default as Slide30Team } from './Slide20Team';
-export { default as Slide31FundingAskFinal } from './Slide7FundingAsk';
-export { default as Slide32TheAsk } from './Slide21TheAsk';
+// Streamlined 12-slide pitch deck
+export { default as NewSlide1Title } from './NewSlide1Title';
+export { default as NewSlide2Problem } from './NewSlide2Problem';
+export { default as NewSlide3Product } from './NewSlide3Product';
+export { default as NewSlide4Traction } from './NewSlide4Traction';
+export { default as NewSlide5BusinessModel } from './NewSlide5BusinessModel';
+export { default as NewSlide6Competition } from './NewSlide6Competition';
+export { default as NewSlide7GoToMarket } from './NewSlide7GoToMarket';
+export { default as NewSlide8Financials } from './NewSlide8Financials';
+export { default as NewSlide9Roadmap } from './NewSlide9Roadmap';
+export { default as NewSlide10Team } from './NewSlide10Team';
+export { default as NewSlide11TheAsk } from './NewSlide11TheAsk';
+export { default as NewSlide12ThankYou } from './NewSlide12ThankYou';
+
+// Legacy slides moved to ./archive/ folder for reference

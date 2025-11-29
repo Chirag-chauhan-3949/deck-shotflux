@@ -1,38 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
-  Slide1Title,
-  Slide2ExecutiveSummary,
-  Slide3Problem,
-  Slide4WorkflowVisualization,
-  Slide5Financials,
-  Slide6CustomerGrowth,
-  Slide7UnitEconomics,
-  Slide8FundingAsk,
-  Slide9ConversionFunnel,
-  Slide10AffiliateModel,
-  Slide11WhyPreProduction,
-  Slide12CompetitiveOverview,
-  Slide13CompetitiveFeatures,
-  Slide14Traction,
-  Slide15SampleProcessingCosts,
-  Slide16RevenueModel,
-  Slide17ProfitMargins,
-  Slide18RevenueProjections,
-  Slide19GoToMarket,
-  Slide20Roadmap,
-  Slide21FundingMonthly,
-  Slide22OneTimeCapitalCosts,
-  Slide23YouTubeChannels,
-  Slide24SubredditsGTMPart1,
-  Slide25SubredditsGTMPart2,
-  Slide26CACvsLTV,
-  Slide27SpendBreakdownPart1,
-  Slide28SpendBreakdownPart2,
-  Slide29CROImpact,
-  Slide30Team,
-  Slide31FundingAskFinal,
-  Slide32TheAsk
+  NewSlide1Title,
+  NewSlide2Problem,
+  NewSlide3Product,
+  NewSlide4Traction,
+  NewSlide5BusinessModel,
+  NewSlide6Competition,
+  NewSlide7GoToMarket,
+  NewSlide8Financials,
+  NewSlide9Roadmap,
+  NewSlide10Team,
+  NewSlide11TheAsk,
+  NewSlide12ThankYou
 } from './slides';
 
 const PitchDeck = () => {
@@ -48,22 +28,22 @@ const PitchDeck = () => {
         width: 10px;
         height: 10px;
       }
-      
+
       ::-webkit-scrollbar-track {
         background: #1f2937;
         border-radius: 10px;
       }
-      
+
       ::-webkit-scrollbar-thumb {
         background: #10b981;
         border-radius: 10px;
         border: 2px solid #1f2937;
       }
-      
+
       ::-webkit-scrollbar-thumb:hover {
         background: #059669;
       }
-      
+
       /* Custom scrollbar for Firefox */
       * {
         scrollbar-width: thin;
@@ -189,8 +169,8 @@ const PitchDeck = () => {
   // Add meta tags and title
   useEffect(() => {
     // Set document title
-    document.title = 'Shotflux Investor Pitch Deck';
-    
+    document.title = 'ShotFlux - Investor Pitch Deck';
+
     // Add or update meta tags
     const setMetaTag = (name: string, content: string, isProperty = false) => {
       const attribute = isProperty ? 'property' : 'name';
@@ -204,24 +184,24 @@ const PitchDeck = () => {
     };
 
     // Standard meta tags
-    setMetaTag('description', 'Raising ₹1.25 Cr to reach 500 active paying users in 6 months. AI-powered pre-production for filmmakers.');
+    setMetaTag('description', 'ShotFlux - AI-powered pre-production for filmmakers. Raising ₹1.25 Cr for 25% equity.');
 
     // Open Graph tags for social media
     setMetaTag('og:title', 'ShotFlux Investor Pitch Deck', true);
-    setMetaTag('og:description', 'Raising ₹1.25 Cr to reach 500 active paying users in 6 months. AI-powered pre-production for filmmakers.', true);
+    setMetaTag('og:description', 'AI-powered pre-production platform. From script to storyboard in minutes.', true);
     setMetaTag('og:type', 'website', true);
 
     // Twitter Card tags
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'ShotFlux Investor Pitch Deck');
-    setMetaTag('twitter:description', 'Raising ₹1.25 Cr to reach 500 active paying users in 6 months. AI-powered pre-production for filmmakers.');
+    setMetaTag('twitter:description', 'AI-powered pre-production platform. From script to storyboard in minutes.');
   }, []);
 
   const nextSlide = () => {
     setSlideDirection('next');
     setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
   };
-  
+
   const prevSlide = () => {
     setSlideDirection('prev');
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
@@ -259,38 +239,20 @@ const PitchDeck = () => {
     }
   };
 
+  // New streamlined 12-slide deck
   const slides = [
-    { component: Slide1Title },
-    { component: Slide2ExecutiveSummary },
-    { component: Slide3Problem },
-    { component: Slide4WorkflowVisualization },
-    { component: Slide5Financials },
-    { component: Slide6CustomerGrowth },
-    { component: Slide7UnitEconomics },
-    { component: Slide9ConversionFunnel },
-    { component: Slide10AffiliateModel },
-    { component: Slide11WhyPreProduction },
-    { component: Slide12CompetitiveOverview },
-    { component: Slide13CompetitiveFeatures },
-    { component: Slide14Traction },
-    { component: Slide15SampleProcessingCosts },
-    { component: Slide16RevenueModel },
-    { component: Slide17ProfitMargins },
-    { component: Slide18RevenueProjections },
-    { component: Slide19GoToMarket },
-    { component: Slide20Roadmap },
-    { component: Slide21FundingMonthly },
-    { component: Slide22OneTimeCapitalCosts },
-    { component: Slide23YouTubeChannels },
-    { component: Slide24SubredditsGTMPart1 },
-    { component: Slide25SubredditsGTMPart2 },
-    { component: Slide26CACvsLTV },
-    { component: Slide27SpendBreakdownPart1 },
-    { component: Slide28SpendBreakdownPart2 },
-    { component: Slide29CROImpact },
-    { component: Slide30Team },
-    { component: Slide31FundingAskFinal },
-    { component: Slide32TheAsk }
+    { component: NewSlide1Title, name: 'Title' },
+    { component: NewSlide2Problem, name: 'Problem & Solution' },
+    { component: NewSlide3Product, name: 'Product' },
+    { component: NewSlide4Traction, name: 'Traction' },
+    { component: NewSlide5BusinessModel, name: 'Business Model' },
+    { component: NewSlide6Competition, name: 'Competition' },
+    { component: NewSlide7GoToMarket, name: 'Go-to-Market' },
+    { component: NewSlide8Financials, name: 'Financials' },
+    { component: NewSlide9Roadmap, name: 'Roadmap' },
+    { component: NewSlide10Team, name: 'Team' },
+    { component: NewSlide11TheAsk, name: 'The Ask' },
+    { component: NewSlide12ThankYou, name: 'Thank You' }
   ];
 
   const SlideComponent = slides[currentSlide].component;
@@ -333,13 +295,14 @@ const PitchDeck = () => {
             {currentSlide + 1} / {slides.length}
           </span>
           <div className="hidden sm:flex gap-1">
-            {slides.map((_, index) => (
+            {slides.map((slide, index) => (
               <button
                 key={index}
                 onClick={() => {
                   setSlideDirection(index > currentSlide ? 'next' : 'prev');
                   setCurrentSlide(index);
                 }}
+                title={slide.name}
                 className={`h-2 rounded-full transition-all ${
                   index === currentSlide
                     ? 'w-8 bg-green-500'
