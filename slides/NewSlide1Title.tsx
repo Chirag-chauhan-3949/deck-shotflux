@@ -32,7 +32,7 @@ const NewSlide1Title = () => {
           <p className="text-xs sm:text-sm text-gray-400">Gross Margin</p>
         </div>
         <div className="text-center">
-          <p className="text-2xl sm:text-3xl font-bold text-green-400">₹1.25Cr</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400">₹69L</p>
           <p className="text-xs sm:text-sm text-gray-400">Raising (Seed)</p>
         </div>
       </div>
