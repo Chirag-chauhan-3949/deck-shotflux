@@ -184,7 +184,7 @@ const PitchDeck = () => {
     };
 
     // Standard meta tags
-    setMetaTag('description', 'ShotFlux - AI-powered pre-production for filmmakers. Raising ₹1.25 Cr for 25% equity.');
+    setMetaTag('description', 'ShotFlux - AI-powered pre-production for filmmakers. Raising ₹69L for 25% equity.');
 
     // Open Graph tags for social media
     setMetaTag('og:title', 'ShotFlux Investor Pitch Deck', true);

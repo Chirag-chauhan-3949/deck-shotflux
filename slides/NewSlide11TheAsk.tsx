@@ -11,12 +11,12 @@ const NewSlide11TheAsk = () => {
         <div className="space-y-4">
           <div className="bg-gradient-to-br from-green-900/40 to-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-green-500">
             <p className="text-lg text-gray-300 mb-2">We are raising</p>
-            <p className="text-5xl sm:text-6xl font-bold text-green-400 mb-2">₹1.25 Cr</p>
-            <p className="text-xl text-gray-300 mb-1">~$150,000 USD</p>
+            <p className="text-5xl sm:text-6xl font-bold text-green-400 mb-2">₹69L</p>
+            <p className="text-xl text-gray-300 mb-1">~$83,000 USD</p>
             <p className="text-lg text-white font-semibold mb-4">for 25% equity</p>
             <div className="border-t border-green-500/30 pt-4">
-              <p className="text-sm text-gray-400">Pre-money valuation: ₹3.75 Cr (~$450K)</p>
-              <p className="text-sm text-gray-400">Post-money valuation: ₹5 Cr (~$600K)</p>
+              <p className="text-sm text-gray-400">Pre-money valuation: ₹2.07 Cr (~$248K)</p>
+              <p className="text-sm text-gray-400">Post-money valuation: ₹2.76 Cr (~$331K)</p>
             </div>
           </div>
 
