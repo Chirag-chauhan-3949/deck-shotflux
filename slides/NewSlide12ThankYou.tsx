@@ -9,13 +9,13 @@ const NewSlide12ThankYou = () => {
         ShotFlux™
       </h1>
       <p className="text-xl sm:text-2xl text-green-400 mb-8 italic">
-        From Story to Film, In Minutes
+        From Script to Storyboard in Minutes
       </p>
 
       {/* Key Stats Reminder */}
       <div className="grid grid-cols-3 gap-4 sm:gap-8 mb-8 max-w-2xl">
         <div className="text-center">
-          <p className="text-2xl sm:text-3xl font-bold text-green-400">₹1.25Cr</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400">₹69L</p>
           <p className="text-xs sm:text-sm text-gray-400">Raising</p>
         </div>
         <div className="text-center">
