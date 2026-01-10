@@ -31,7 +31,7 @@ const Slide15GoToMarket = () => {
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">Film School Partnerships</h3>
           <p className="text-base sm:text-lg text-green-400 mb-3">Educational Institution Outreach</p>
           <div className="space-y-2 text-gray-300 text-xs sm:text-sm">
-            <p>• FTII, SRFTI, Whistling Woods, and regional film schools</p>
+            <p>• FTII, SRFTI, and regional film schools</p>
             <p>• Student discount programs and curriculum integration</p>
           </div>
         </div>

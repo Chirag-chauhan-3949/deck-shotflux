@@ -27,7 +27,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹24L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹14.4L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹9.6L</td>
-              <td className="p-2 sm:p-3 text-center text-blue-400">₹30L</td>
+              <td className="p-2 sm:p-3 text-center text-blue-400">₹2 Cr</td>
               <td className="p-2 sm:p-3 text-center text-green-400">₹160L</td>
             </tr>
             <tr className="border-t border-gray-700 bg-gray-800/50">
@@ -37,7 +37,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹19.5L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹11.7L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹7.8L</td>
-              <td className="p-2 sm:p-3 text-center text-blue-400">₹150L</td>
+              <td className="p-2 sm:p-3 text-center text-blue-400">₹11 Cr</td>
               <td className="p-2 sm:p-3 text-center text-green-400">₹130L</td>
             </tr>
             <tr className="border-t border-gray-700">
@@ -47,7 +47,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹16.5L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹9.9L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹6.6L</td>
-              <td className="p-2 sm:p-3 text-center text-blue-400">₹350L</td>
+              <td className="p-2 sm:p-3 text-center text-blue-400">₹24 Cr</td>
               <td className="p-2 sm:p-3 text-center text-green-400">₹110L</td>
             </tr>
             <tr className="border-t-2 border-green-500 bg-green-900/20">
@@ -57,7 +57,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-white font-bold">₹60L</td>
               <td className="p-2 sm:p-3 text-center text-white font-bold">₹36L</td>
               <td className="p-2 sm:p-3 text-center text-white font-bold">₹24L</td>
-              <td className="p-2 sm:p-3 text-center text-blue-400 font-bold">₹530L</td>
+              <td className="p-2 sm:p-3 text-center text-blue-400 font-bold">₹37 Cr</td>
               <td className="p-2 sm:p-3 text-center text-green-400 font-bold">₹400L</td>
             </tr>
           </tbody>
@@ -74,12 +74,12 @@ const Slide17FundingMonthly = () => {
         </div>
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-purple-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Total Revenue (3Y)</h3>
-          <p className="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">₹530L</p>
+          <p className="text-2xl sm:text-3xl font-bold text-blue-400 mb-1">₹37 Cr</p>
           <p className="text-gray-400 text-xs sm:text-sm">From 25,000+ paying users</p>
         </div>
         <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-green-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Net Position Year 3</h3>
-          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹130L Profit</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹33 Cr Profit</p>
           <p className="text-gray-400 text-xs sm:text-sm">Profitable & Series A ready</p>
         </div>
       </div>

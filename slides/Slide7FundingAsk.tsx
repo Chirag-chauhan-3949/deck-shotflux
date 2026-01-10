@@ -18,8 +18,8 @@ const Slide7FundingAsk = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 w-full max-w-4xl">
         <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border-2 border-blue-500/30">
           <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400 mb-3 mx-auto" />
-          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">₹350L/Year</p>
-          <p className="text-sm sm:text-base text-gray-300">Projected Revenue by Y3</p>
+          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">₹37 Cr</p>
+          <p className="text-sm sm:text-base text-gray-300">Projected Revenue (3Y)</p>
         </div>
         <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border-2 border-green-500/30">
           <Users className="w-8 h-8 sm:w-10 sm:h-10 text-green-400 mb-3 mx-auto" />

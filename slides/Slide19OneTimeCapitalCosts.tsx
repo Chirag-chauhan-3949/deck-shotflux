@@ -65,7 +65,7 @@ const Slide18OneTimeCapitalCosts = () => {
       </div>
 
       <div className="bg-gradient-to-r from-purple-900/20 to-gray-800 p-4 sm:p-6 rounded-xl border border-purple-500/30 mt-4">
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Enterprise Opportunity: Whistling Woods International</h3>
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Enterprise Opportunity: Film Institutes</h3>
         <div className="space-y-2 text-gray-300 text-xs sm:text-sm">
           <p className="font-semibold text-white">Ongoing Discussions for Enterprise Partnership</p>
           <p>• Premium film institute with 1000+ students and faculty</p>
@@ -82,12 +82,12 @@ const Slide18OneTimeCapitalCosts = () => {
         </div>
         <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-green-500/30 text-center">
           <Users className="w-6 h-6 sm:w-8 sm:h-8 text-green-400 mx-auto mb-2" />
-          <p className="text-xl sm:text-2xl font-bold text-white">₹530L</p>
+          <p className="text-xl sm:text-2xl font-bold text-white">₹37 Cr</p>
           <p className="text-gray-400 text-xs sm:text-sm">3-Year Revenue</p>
         </div>
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-purple-500/30 text-center">
           <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400 mx-auto mb-2" />
-          <p className="text-xl sm:text-2xl font-bold text-white">₹130L</p>
+          <p className="text-xl sm:text-2xl font-bold text-white">₹33 Cr</p>
           <p className="text-gray-400 text-xs sm:text-sm">Net Profit by Y3</p>
         </div>
       </div>

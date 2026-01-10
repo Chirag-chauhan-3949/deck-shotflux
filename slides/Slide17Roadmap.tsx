@@ -11,7 +11,7 @@ const Slide16Roadmap = () => {
             <div className="bg-yellow-500 text-black font-bold text-xs py-1 px-2 rounded mr-2 sm:mr-3 flex-shrink-0">Y1</div>
             <div>
               <h3 className="text-sm sm:text-base font-bold text-white mb-1">Foundation & Launch (Year 1)</h3>
-              <p className="text-gray-300 text-xs">Team building, platform development, beta launch, acquire 2,000 paying users, generate ₹30L revenue</p>
+              <p className="text-gray-300 text-xs">Team building, platform development, beta launch, acquire 2,000 paying users, generate ₹2 Cr revenue</p>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@ const Slide16Roadmap = () => {
             <div className="bg-blue-500 text-black font-bold text-xs py-1 px-2 rounded mr-2 sm:mr-3 flex-shrink-0">Y2</div>
             <div>
               <h3 className="text-sm sm:text-base font-bold text-white mb-1">Growth & Breakeven (Year 2)</h3>
-              <p className="text-gray-300 text-xs">Scale marketing, enterprise partnerships (Whistling Woods), reach 10,000 users, ₹150L revenue, achieve breakeven</p>
+              <p className="text-gray-300 text-xs">Scale marketing, enterprise partnerships, reach 10,000 users, ₹11 Cr revenue, achieve breakeven</p>
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Slide16Roadmap = () => {
             <div className="bg-green-500 text-black font-bold text-xs py-1 px-2 rounded mr-2 sm:mr-3 flex-shrink-0">Y3</div>
             <div>
               <h3 className="text-sm sm:text-base font-bold text-white mb-1">Profitability & Expansion (Year 3)</h3>
-              <p className="text-gray-300 text-xs">Global expansion, 25,000+ users, ₹350L revenue, ₹240L profit, Series A readiness</p>
+              <p className="text-gray-300 text-xs">Global expansion, 25,000+ users, ₹24 Cr revenue, ₹23 Cr profit, Series A readiness</p>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Slide16Roadmap = () => {
           </div>
           <div className="text-center">
             <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400 mx-auto mb-1" />
-            <p className="text-xs sm:text-sm text-gray-300">₹240L Profit</p>
+            <p className="text-xs sm:text-sm text-gray-300">₹23 Cr Profit</p>
             <p className="text-xs text-purple-400">Year 3</p>
           </div>
         </div>

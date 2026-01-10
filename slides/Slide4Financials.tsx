@@ -4,9 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const Slide4Financials = () => {
   // Updated financial data based on 3-year runway and ₹4 Cr funding
   const yearlyData = [
-    { year: 'Year 1', opening: 400, spend: 160, revenue: 30, closing: 270 },
-    { year: 'Year 2', opening: 270, spend: 130, revenue: 150, closing: 290 },
-    { year: 'Year 3', opening: 290, spend: 110, revenue: 350, closing: 530 }
+    { year: 'Year 1', opening: 400, spend: 160, revenue: 2, closing: 440 },
+    { year: 'Year 2', opening: 440, spend: 130, revenue: 11, closing: 1410 },
+    { year: 'Year 3', opening: 1410, spend: 110, revenue: 24, closing: 3700 }
   ];
 
   return (
@@ -42,10 +42,10 @@ const Slide4Financials = () => {
             <BarChart data={yearlyData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
               <XAxis dataKey="year" stroke="#9CA3AF" />
-              <YAxis stroke="#9CA3AF" label={{ value: '₹Lakhs', angle: -90, position: 'insideLeft', fill: '#9CA3AF' }} />
+              <YAxis stroke="#9CA3AF" label={{ value: '₹Crore', angle: -90, position: 'insideLeft', fill: '#9CA3AF' }} />
               <Tooltip
                 contentStyle={{ backgroundColor: '#1F2937', border: '1px solid #10B981' }}
-                formatter={(value) => [`₹${value}L`, 'Amount']}
+                formatter={(value) => [`₹${value} Cr`, 'Amount']}
               />
               <Bar dataKey="revenue" fill="#10B981" name="Revenue" />
             </BarChart>
@@ -59,11 +59,11 @@ const Slide4Financials = () => {
           <p className="text-gray-300 text-xs sm:text-sm">Total Investment (3 Years)</p>
         </div>
         <div className="bg-gray-800 p-4 sm:p-5 rounded-lg text-center">
-          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹530L</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹37 Cr</p>
           <p className="text-gray-300 text-xs sm:text-sm">Projected Revenue (3 Years)</p>
         </div>
         <div className="bg-gray-800 p-4 sm:p-5 rounded-lg text-center">
-          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹130L</p>
+          <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹33 Cr</p>
           <p className="text-gray-300 text-xs sm:text-sm">Net Profit by Year 3</p>
         </div>
       </div>

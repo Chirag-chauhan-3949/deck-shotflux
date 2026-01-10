@@ -65,15 +65,15 @@ const Slide20TheAsk = () => {
             <ul className="space-y-2 sm:space-y-3">
               <li className="flex items-start">
                 <Target className="text-green-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                <span className="text-gray-300 text-xs sm:text-sm">Year 1: 2,000 users, ₹30L revenue</span>
+                <span className="text-gray-300 text-xs sm:text-sm">Year 1: 2,000 users, ₹2 Cr revenue</span>
               </li>
               <li className="flex items-start">
                 <TrendingUp className="text-blue-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                <span className="text-gray-300 text-xs sm:text-sm">Year 2: 10,000 users, ₹150L revenue (Breakeven)</span>
+                <span className="text-gray-300 text-xs sm:text-sm">Year 2: 10,000 users, ₹11 Cr revenue (Breakeven)</span>
               </li>
               <li className="flex items-start">
                 <DollarSign className="text-green-500 mr-2 mt-1 flex-shrink-0" size={16} />
-                <span className="text-gray-300 text-xs sm:text-sm">Year 3: 25,000+ users, ₹350L revenue, ₹240L profit</span>
+                <span className="text-gray-300 text-xs sm:text-sm">Year 3: 25,000+ users, ₹24 Cr revenue, ₹23 Cr profit</span>
               </li>
               <li className="flex items-start">
                 <Users className="text-green-500 mr-2 mt-1 flex-shrink-0" size={16} />
@@ -84,7 +84,7 @@ const Slide20TheAsk = () => {
 
           <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border border-purple-500/30">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">Investment Opportunity</h3>
-            <p className="text-gray-300 text-xs sm:text-sm mb-3">High-margin SaaS platform addressing a massive underserved market with clear path to profitability. Enterprise discussions with Whistling Woods International ongoing.</p>
+            <p className="text-gray-300 text-xs sm:text-sm mb-3">High-margin SaaS platform addressing a massive underserved market with clear path to profitability. Enterprise discussions with major film institutes ongoing.</p>
             <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 sm:p-4">
               <p className="text-green-400 font-semibold text-center text-sm sm:text-base">Join us in revolutionizing film pre-production for indie creators worldwide</p>
             </div>
