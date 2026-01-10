@@ -4,7 +4,7 @@ import { TrendingUp, Users, DollarSign, Calendar } from 'lucide-react';
 const Slide14RevenueProjections = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">Revenue Projections (3-Year Runway)</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">Revenue Projections (3-Year)</h2>
       <div className="overflow-x-auto mb-6 sm:mb-8">
         <table className="w-full text-xs sm:text-sm min-w-[700px]">
           <thead className="bg-gray-800">
@@ -13,7 +13,7 @@ const Slide14RevenueProjections = () => {
               <th className="text-center p-2 sm:p-3 font-bold text-white">Users</th>
               <th className="text-center p-2 sm:p-3 font-bold text-white">ARPU (₹/yr)</th>
               <th className="text-center p-2 sm:p-3 font-bold text-white">Revenue (₹L)</th>
-              <th className="text-center p-2 sm:p-3 font-bold text-white">Spend (₹L)</th>
+              <th className="text-center p-2 sm:p-3 font-bold text-white">Spend (₹Cr)</th>
               <th className="text-center p-2 sm:p-3 font-bold text-green-400">Net (₹L)</th>
             </tr>
           </thead>
@@ -23,32 +23,32 @@ const Slide14RevenueProjections = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">2,000</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹10,000</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹2 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-gray-300">₹160L</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">+₹40L</td>
+              <td className="p-2 sm:p-3 text-center text-gray-300">₹2 Cr</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">+₹0 Cr</td>
             </tr>
             <tr className="border-t border-gray-700 bg-gray-800/50">
               <td className="p-2 sm:p-3 text-gray-300 font-medium">Year 2</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">10,000</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹11,000</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹11 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-gray-300">₹130L</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">+₹970L</td>
+              <td className="p-2 sm:p-3 text-center text-gray-300">₹4 Cr</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">+₹7 Cr</td>
             </tr>
             <tr className="border-t border-gray-700">
               <td className="p-2 sm:p-3 text-gray-300 font-medium">Year 3</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">25,000+</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹9,600</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹24 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-gray-300">₹110L</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">+₹2290L</td>
+              <td className="p-2 sm:p-3 text-center text-gray-300">₹6 Cr</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">+₹18 Cr</td>
             </tr>
             <tr className="border-t-2 border-green-500 bg-green-900/20">
               <td className="p-2 sm:p-3 text-white font-bold">Total (3Y)</td>
               <td className="p-2 sm:p-3 text-center text-white font-bold">25,000+</td>
               <td className="p-2 sm:p-3 text-center text-gray-400">-</td>
               <td className="p-2 sm:p-3 text-center text-blue-400 font-bold">₹37 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-white font-bold">₹400L</td>
-              <td className="p-2 sm:p-3 text-center text-green-400 font-bold">+₹33 Cr</td>
+              <td className="p-2 sm:p-3 text-center text-white font-bold">₹12 Cr</td>
+              <td className="p-2 sm:p-3 text-center text-green-400 font-bold">+₹25 Cr</td>
             </tr>
           </tbody>
         </table>

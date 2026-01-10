@@ -4,7 +4,7 @@ import { DollarSign } from 'lucide-react';
 const Slide25SpendBreakdownPart2 = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6 h-full flex flex-col">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Detailed Budget Breakdown (₹4 Cr / 3 Years)</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Detailed Budget Breakdown (₹4 Cr / 18 Months)</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto flex-1">
         <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-blue-500/30 h-fit">

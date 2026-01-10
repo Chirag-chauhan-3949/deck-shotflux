@@ -4,7 +4,7 @@ import { DollarSign, Shield, Palette, Video, Users } from 'lucide-react';
 const Slide18OneTimeCapitalCosts = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Capital Allocation (₹4 Cr / 3 Years)</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Capital Allocation (₹4 Cr / 18 Months)</h2>
       <p className="text-base sm:text-lg text-gray-300 mb-4 sm:mb-6">Strategic investment breakdown for sustainable growth</p>
 
       <div className="overflow-x-auto mb-4">
@@ -22,7 +22,7 @@ const Slide18OneTimeCapitalCosts = () => {
               <td className="p-2 sm:p-3 text-white font-semibold">Team & Salaries</td>
               <td className="p-2 sm:p-3 text-blue-400 font-bold">35%</td>
               <td className="p-2 sm:p-3 text-green-400 font-bold">₹140L</td>
-              <td className="p-2 sm:p-3 text-gray-300">Founders, dev team, support staff over 3 years</td>
+              <td className="p-2 sm:p-3 text-gray-300">Founders, dev team, support staff over 18 months</td>
             </tr>
             <tr className="border-t border-gray-700 bg-gray-800/50">
               <td className="p-2 sm:p-3 text-white font-semibold">Marketing & Ads</td>

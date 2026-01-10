@@ -17,7 +17,7 @@ const Slide25SpendBreakdownPart1 = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6 h-full flex flex-col">
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Funding Allocation Overview</h2>
-      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹4 Crore</span> (3-Year Runway)</p>
+      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹4 Crore</span> (18-Month Runway)</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-1">
         <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30 flex flex-col">

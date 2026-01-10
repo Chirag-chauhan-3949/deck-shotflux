@@ -4,7 +4,7 @@ import { Calendar, TrendingUp, Users, DollarSign } from 'lucide-react';
 const Slide17FundingMonthly = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">3-Year Financial Breakdown</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8">18-Month Financial Breakdown</h2>
       <div className="overflow-x-auto mb-6 sm:mb-8">
         <table className="w-full text-xs sm:text-sm min-w-[700px]">
           <thead className="bg-gray-800">
@@ -28,7 +28,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹14.4L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹9.6L</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹2 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">₹160L</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">₹2 Cr</td>
             </tr>
             <tr className="border-t border-gray-700 bg-gray-800/50">
               <td className="p-2 sm:p-3 text-gray-300 font-medium">Year 2</td>
@@ -38,7 +38,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹11.7L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹7.8L</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹11 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">₹130L</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">₹4 Cr</td>
             </tr>
             <tr className="border-t border-gray-700">
               <td className="p-2 sm:p-3 text-gray-300 font-medium">Year 3</td>
@@ -48,7 +48,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-gray-300">₹9.9L</td>
               <td className="p-2 sm:p-3 text-center text-gray-300">₹6.6L</td>
               <td className="p-2 sm:p-3 text-center text-blue-400">₹24 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-green-400">₹110L</td>
+              <td className="p-2 sm:p-3 text-center text-green-400">₹6 Cr</td>
             </tr>
             <tr className="border-t-2 border-green-500 bg-green-900/20">
               <td className="p-2 sm:p-3 text-white font-bold">Total (3Y)</td>
@@ -58,7 +58,7 @@ const Slide17FundingMonthly = () => {
               <td className="p-2 sm:p-3 text-center text-white font-bold">₹36L</td>
               <td className="p-2 sm:p-3 text-center text-white font-bold">₹24L</td>
               <td className="p-2 sm:p-3 text-center text-blue-400 font-bold">₹37 Cr</td>
-              <td className="p-2 sm:p-3 text-center text-green-400 font-bold">₹400L</td>
+              <td className="p-2 sm:p-3 text-center text-green-400 font-bold">₹12 Cr</td>
             </tr>
           </tbody>
         </table>
@@ -70,7 +70,7 @@ const Slide17FundingMonthly = () => {
         <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-blue-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Total Funding Ask</h3>
           <p className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">₹4 Crore</p>
-          <p className="text-gray-400 text-xs sm:text-sm">3-year runway (~$480K USD)</p>
+          <p className="text-gray-400 text-xs sm:text-sm">18-month runway (~$480K USD)</p>
         </div>
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-5 rounded-lg border border-purple-500/30">
           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Total Revenue (3Y)</h3>

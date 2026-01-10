@@ -11,7 +11,7 @@ const Slide20TheAsk = () => {
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">Funding Requirements</h3>
             <div className="space-y-3 sm:space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-gray-300 text-sm sm:text-base">3-Year Operations</span>
+                <span className="text-gray-300 text-sm sm:text-base">18-Month Operations</span>
                 <span className="text-green-400 font-bold text-sm sm:text-base">₹360 Lakhs</span>
               </div>
               <div className="flex justify-between items-center">

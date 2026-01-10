@@ -20,7 +20,7 @@ const Slide25SpendBreakdown = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
         <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
-          <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Allocation of ₹4 Crore (3 Years)</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Allocation of ₹4 Crore (18 Months)</h3>
           <ResponsiveContainer width="100%" height={350}>
             <PieChart>
               <Pie
@@ -202,7 +202,7 @@ const Slide25SpendBreakdown = () => {
           <div>
             <h4 className="text-green-400 font-semibold mb-2">Growth-Focused (60%)</h4>
             <p className="text-xs">
-              35% on team + 25% on marketing ensures we have the right talent to build and the resources to scale user acquisition aggressively over 3 years.
+              35% on team + 25% on marketing ensures we have the right talent to build and the resources to scale user acquisition aggressively over 18 months.
             </p>
           </div>
           <div>

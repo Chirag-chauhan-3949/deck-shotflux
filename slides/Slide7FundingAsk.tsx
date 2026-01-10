@@ -11,7 +11,7 @@ const Slide7FundingAsk = () => {
       <div className="bg-gradient-to-r from-green-900/40 to-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-green-500 mb-6 sm:mb-8 max-w-3xl w-full">
         <p className="text-lg sm:text-xl text-white mb-2 sm:mb-3">We are raising</p>
         <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-2 sm:mb-3">₹4 Cr</p>
-        <p className="text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">~$480,000 USD - Seed Capital for 3-Year Runway</p>
+        <p className="text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">~$480,000 USD - Seed Capital for 18-Month Runway</p>
         <p className="text-sm sm:text-base text-gray-400">Path to 25,000+ paying users and profitability by Year 3</p>
       </div>
 
