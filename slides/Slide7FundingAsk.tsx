@@ -10,21 +10,21 @@ const Slide7FundingAsk = () => {
       
       <div className="bg-gradient-to-r from-green-900/40 to-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-green-500 mb-6 sm:mb-8 max-w-3xl w-full">
         <p className="text-lg sm:text-xl text-white mb-2 sm:mb-3">We are raising</p>
-        <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-2 sm:mb-3">₹1.25 Cr</p>
-        <p className="text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">~$150,000 USD - Seed Capital for 6-Month Runway</p>
-        <p className="text-sm sm:text-base text-gray-400">Accelerated growth path to 500 active paying users by Month 6</p>
+        <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-400 mb-2 sm:mb-3">₹4 Cr</p>
+        <p className="text-lg sm:text-xl text-gray-300 mb-3 sm:mb-4">~$480,000 USD - Seed Capital for 3-Year Runway</p>
+        <p className="text-sm sm:text-base text-gray-400">Path to 25,000+ paying users and profitability by Year 3</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 w-full max-w-4xl">
         <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border-2 border-blue-500/30">
           <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400 mb-3 mx-auto" />
-          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">₹11.25L/Month</p>
-          <p className="text-sm sm:text-base text-gray-300">Projected MRR by M6</p>
+          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">₹350L/Year</p>
+          <p className="text-sm sm:text-base text-gray-300">Projected Revenue by Y3</p>
         </div>
         <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border-2 border-green-500/30">
           <Users className="w-8 h-8 sm:w-10 sm:h-10 text-green-400 mb-3 mx-auto" />
-          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">500 Users</p>
-          <p className="text-sm sm:text-base text-gray-300">Target Paying Users by M6</p>
+          <p className="text-2xl sm:text-3xl font-bold text-white mb-2">25,000+ Users</p>
+          <p className="text-sm sm:text-base text-gray-300">Target Paying Users by Y3</p>
         </div>
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-6 rounded-xl border-2 border-purple-500/30">
           <DollarSign className="w-8 h-8 sm:w-10 sm:h-10 text-purple-400 mb-3 mx-auto" />

@@ -1,15 +1,15 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
-import { DollarSign, TrendingUp, Shield, Zap, Users, Wrench } from 'lucide-react';
+import { DollarSign, TrendingUp, Shield, Zap, Users, Wrench, FileText } from 'lucide-react';
 
 const Slide25SpendBreakdown = () => {
   const spendData = [
-    { name: 'Ads & Growth', value: 32, amount: 21, color: '#10B981', icon: TrendingUp },
-    { name: 'Salaries & Ops', value: 26, amount: 18, color: '#3B82F6', icon: Users },
-    { name: 'Infra & SaaS', value: 18, amount: 12, color: '#8B5CF6', icon: Zap },
-    { name: 'Contingency', value: 11, amount: 7.8, color: '#F59E0B', icon: Shield },
-    { name: 'Legal & Security', value: 7, amount: 4.5, color: '#EF4444', icon: Shield },
-    { name: 'CRO & Optimization', value: 6, amount: 4, color: '#06B6D4', icon: Wrench }
+    { name: 'Team & Salaries', value: 35, amount: 140, color: '#3B82F6', icon: Users },
+    { name: 'Marketing & Ads', value: 25, amount: 100, color: '#10B981', icon: TrendingUp },
+    { name: 'Infrastructure & AI', value: 15, amount: 60, color: '#8B5CF6', icon: Zap },
+    { name: 'Content & Legal', value: 9, amount: 36, color: '#EF4444', icon: FileText },
+    { name: 'CRO & Operations', value: 6, amount: 24, color: '#06B6D4', icon: Wrench },
+    { name: 'Contingency', value: 10, amount: 40, color: '#F59E0B', icon: Shield }
   ];
 
   const COLORS = spendData.map(item => item.color);
@@ -20,7 +20,7 @@ const Slide25SpendBreakdown = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
         <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30">
-          <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Allocation of ₹1.25 Crore</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">Allocation of ₹4 Crore (3 Years)</h3>
           <ResponsiveContainer width="100%" height={350}>
             <PieChart>
               <Pie
@@ -84,110 +84,110 @@ const Slide25SpendBreakdown = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-green-500/30">
-          <h3 className="text-sm font-semibold text-green-400 mb-3">Ads & Growth (32%)</h3>
+        <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-blue-500/30">
+          <h3 className="text-sm font-semibold text-blue-400 mb-3">Team & Salaries (35%)</h3>
           <ul className="space-y-1 text-xs text-gray-300">
             <li className="flex justify-between">
-              <span>Paid Ads (M1-M6)</span>
-              <span className="text-green-400">₹19.5L</span>
+              <span>Founder Salaries (3Y)</span>
+              <span className="text-blue-400">₹72L</span>
             </li>
             <li className="flex justify-between">
-              <span>YouTube Collabs</span>
-              <span className="text-green-400">₹12.5L</span>
+              <span>Dev Team Hires</span>
+              <span className="text-blue-400">₹48L</span>
             </li>
             <li className="flex justify-between">
-              <span>Marketing Agency</span>
-              <span className="text-green-400">₹9L</span>
+              <span>Support & Community</span>
+              <span className="text-blue-400">₹20L</span>
             </li>
           </ul>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-blue-500/30">
-          <h3 className="text-sm font-semibold text-blue-400 mb-3">Salaries & Operations (26%)</h3>
+        <div className="bg-gradient-to-br from-green-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-green-500/30">
+          <h3 className="text-sm font-semibold text-green-400 mb-3">Marketing & Ads (25%)</h3>
           <ul className="space-y-1 text-xs text-gray-300">
             <li className="flex justify-between">
-              <span>Founder Salaries</span>
-              <span className="text-blue-400">₹8.4L</span>
+              <span>Paid Advertising</span>
+              <span className="text-green-400">₹50L</span>
             </li>
             <li className="flex justify-between">
-              <span>Operations</span>
-              <span className="text-blue-400">₹3L</span>
+              <span>Influencer/Collabs</span>
+              <span className="text-green-400">₹30L</span>
             </li>
             <li className="flex justify-between">
-              <span>SaaS Tools</span>
-              <span className="text-blue-400">₹1.8L</span>
+              <span>Marketing Agency</span>
+              <span className="text-green-400">₹20L</span>
             </li>
           </ul>
         </div>
 
         <div className="bg-gradient-to-br from-purple-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-purple-500/30">
-          <h3 className="text-sm font-semibold text-purple-400 mb-3">Infrastructure & SaaS (18%)</h3>
+          <h3 className="text-sm font-semibold text-purple-400 mb-3">Infrastructure & AI (15%)</h3>
           <ul className="space-y-1 text-xs text-gray-300">
             <li className="flex justify-between">
-              <span>Server/API Costs</span>
-              <span className="text-purple-400">₹2.55L</span>
+              <span>AI/ML APIs (OpenAI)</span>
+              <span className="text-purple-400">₹30L</span>
             </li>
             <li className="flex justify-between">
-              <span>OpenAI/Image APIs</span>
-              <span className="text-purple-400">₹1.5L</span>
+              <span>Cloud & Servers</span>
+              <span className="text-purple-400">₹20L</span>
             </li>
             <li className="flex justify-between">
-              <span>Backend (Supabase)</span>
-              <span className="text-purple-400">₹0.9L</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-gradient-to-br from-cyan-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-cyan-500/30">
-          <h3 className="text-sm font-semibold text-cyan-400 mb-3">CRO & Optimization (6%)</h3>
-          <ul className="space-y-1 text-xs text-gray-300">
-            <li className="flex justify-between">
-              <span>GoodUI Consulting</span>
-              <span className="text-cyan-400">₹4.15L</span>
-            </li>
-            <li className="flex justify-between">
-              <span>Hotjar/Mixpanel</span>
-              <span className="text-cyan-400">₹0.6L</span>
-            </li>
-            <li className="flex justify-between">
-              <span>A/B Testing</span>
-              <span className="text-cyan-400">Included</span>
+              <span>SaaS Tools</span>
+              <span className="text-purple-400">₹10L</span>
             </li>
           </ul>
         </div>
 
         <div className="bg-gradient-to-br from-red-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-red-500/30">
-          <h3 className="text-sm font-semibold text-red-400 mb-3">Legal & Security (7%)</h3>
+          <h3 className="text-sm font-semibold text-red-400 mb-3">Content & Legal (9%)</h3>
           <ul className="space-y-1 text-xs text-gray-300">
             <li className="flex justify-between">
-              <span>Legal (M1)</span>
-              <span className="text-red-400">₹2L</span>
+              <span>Content Production</span>
+              <span className="text-red-400">₹20L</span>
             </li>
             <li className="flex justify-between">
-              <span>Security Audit (M3)</span>
-              <span className="text-red-400">₹2.5L</span>
+              <span>Legal & Compliance</span>
+              <span className="text-red-400">₹10L</span>
             </li>
             <li className="flex justify-between">
-              <span>IP Protection</span>
-              <span className="text-red-400">Included</span>
+              <span>IP & Security</span>
+              <span className="text-red-400">₹6L</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gradient-to-br from-cyan-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-cyan-500/30">
+          <h3 className="text-sm font-semibold text-cyan-400 mb-3">CRO & Operations (6%)</h3>
+          <ul className="space-y-1 text-xs text-gray-300">
+            <li className="flex justify-between">
+              <span>CRO Consulting</span>
+              <span className="text-cyan-400">₹12L</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Analytics Tools</span>
+              <span className="text-cyan-400">₹6L</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Operations</span>
+              <span className="text-cyan-400">₹6L</span>
             </li>
           </ul>
         </div>
 
         <div className="bg-gradient-to-br from-yellow-900/30 to-gray-800 p-4 sm:p-5 rounded-xl border border-yellow-500/30">
-          <h3 className="text-sm font-semibold text-yellow-400 mb-3">Contingency (11%)</h3>
+          <h3 className="text-sm font-semibold text-yellow-400 mb-3">Contingency (10%)</h3>
           <ul className="space-y-1 text-xs text-gray-300">
             <li className="flex justify-between">
               <span>Buffer Fund</span>
-              <span className="text-yellow-400">₹7.8L</span>
+              <span className="text-yellow-400">₹40L</span>
             </li>
             <li className="flex justify-between">
               <span>Purpose</span>
-              <span className="text-yellow-400">10% cushion</span>
+              <span className="text-yellow-400">Risk Buffer</span>
             </li>
             <li className="flex justify-between">
-              <span>Risk Mitigation</span>
-              <span className="text-yellow-400">Essential</span>
+              <span>Coverage</span>
+              <span className="text-yellow-400">~4 Months</span>
             </li>
           </ul>
         </div>
@@ -200,17 +200,15 @@ const Slide25SpendBreakdown = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300">
           <div>
-            <h4 className="text-green-400 font-semibold mb-2">Growth-Focused (58%)</h4>
+            <h4 className="text-green-400 font-semibold mb-2">Growth-Focused (60%)</h4>
             <p className="text-xs">
-              32% on ads and growth marketing + 26% on team and operations ensures we can execute aggressive user
-              acquisition while maintaining product quality and customer support.
+              35% on team + 25% on marketing ensures we have the right talent to build and the resources to scale user acquisition aggressively over 3 years.
             </p>
           </div>
           <div>
-            <h4 className="text-blue-400 font-semibold mb-2">Sustainable Foundation (42%)</h4>
+            <h4 className="text-blue-400 font-semibold mb-2">Sustainable Foundation (40%)</h4>
             <p className="text-xs">
-              18% infrastructure + 7% legal/security + 6% CRO + 11% contingency builds a robust, secure platform with
-              optimized conversion and protection against unforeseen challenges.
+              15% infrastructure + 9% content/legal + 6% CRO + 10% contingency builds a robust, secure platform with optimized conversion and protection against challenges.
             </p>
           </div>
         </div>

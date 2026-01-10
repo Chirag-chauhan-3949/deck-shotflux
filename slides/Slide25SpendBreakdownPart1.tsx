@@ -1,15 +1,15 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import { TrendingUp, Users, Zap, Shield, Wrench } from 'lucide-react';
+import { TrendingUp, Users, Zap, Shield, Wrench, FileText } from 'lucide-react';
 
 const Slide25SpendBreakdownPart1 = () => {
   const spendData = [
-    { name: 'Ads & Growth', value: 32, amount: 24, color: '#10B981', icon: TrendingUp },
-    { name: 'Salaries & Ops', value: 26, amount: 19.8, color: '#3B82F6', icon: Users },
-    { name: 'Infra & SaaS', value: 18, amount: 13.7, color: '#8B5CF6', icon: Zap },
-    { name: 'Contingency', value: 11, amount: 8.3, color: '#F59E0B', icon: Shield },
-    { name: 'Legal & Security', value: 7, amount: 5.3, color: '#EF4444', icon: Shield },
-    { name: 'CRO & Optimization', value: 6, amount: 4.6, color: '#06B6D4', icon: Wrench }
+    { name: 'Team & Salaries', value: 35, amount: 140, color: '#3B82F6', icon: Users },
+    { name: 'Marketing & Ads', value: 25, amount: 100, color: '#10B981', icon: TrendingUp },
+    { name: 'Infrastructure & AI', value: 15, amount: 60, color: '#8B5CF6', icon: Zap },
+    { name: 'Content & Legal', value: 9, amount: 36, color: '#EF4444', icon: FileText },
+    { name: 'CRO & Operations', value: 6, amount: 24, color: '#06B6D4', icon: Wrench },
+    { name: 'Contingency', value: 10, amount: 40, color: '#F59E0B', icon: Shield }
   ];
 
   const COLORS = spendData.map(item => item.color);
@@ -17,7 +17,7 @@ const Slide25SpendBreakdownPart1 = () => {
   return (
     <div className="px-4 sm:px-8 md:px-12 py-4 sm:py-6 h-full flex flex-col">
       <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Funding Allocation Overview</h2>
-      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹1.25 Crore</span></p>
+      <p className="text-lg sm:text-xl text-gray-400 mb-6">Total Funding Ask: <span className="text-green-400 font-bold">₹4 Crore</span> (3-Year Runway)</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-1">
         <div className="bg-gray-800 p-4 sm:p-6 rounded-xl border border-green-500/30 flex flex-col">

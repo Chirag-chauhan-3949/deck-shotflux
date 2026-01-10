@@ -43,6 +43,10 @@ const Slide10Traction = () => {
               </li>
               <li className="flex items-start">
                 <Calendar className="text-green-500 mr-2 mt-1 flex-shrink-0" size={16} />
+                <span className="text-gray-300 text-sm sm:text-base">Ongoing talks with Whistling Woods International as enterprise client</span>
+              </li>
+              <li className="flex items-start">
+                <Calendar className="text-green-500 mr-2 mt-1 flex-shrink-0" size={16} />
                 <span className="text-gray-300 text-sm sm:text-base">Partnership discussions with 3 production companies</span>
               </li>
               <li className="flex items-start">
@@ -55,7 +59,7 @@ const Slide10Traction = () => {
       </div>
       <div className="mt-6 sm:mt-8 bg-gray-800 p-4 sm:p-5 rounded-lg">
         <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Next Milestones</h3>
-        <p className="text-gray-300 text-sm sm:text-base">Launch beta version to select filmmakers, complete integration testing, and secure first paying customers within 6 months of funding.</p>
+        <p className="text-gray-300 text-sm sm:text-base">Year 1: Launch beta, acquire 2,000 paying users. Year 2: Scale to 10,000 users and achieve breakeven. Year 3: Expand to 25,000+ users with ₹350L annual revenue and profitability.</p>
       </div>
     </div>
   );
